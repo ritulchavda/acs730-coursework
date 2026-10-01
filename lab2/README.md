@@ -3,3 +3,5 @@
 Instructions for this section will be provided in class and on Blackboard when we reach it.
 
 Put your work for Lab 2 in this folder.
+
+- systemctl start launches the services immediately whereas systemctl enable configures system to start service automatically after every reboot.
