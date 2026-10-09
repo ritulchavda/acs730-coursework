@@ -46,9 +46,11 @@ The SSM parameter should contain `hello from GitHub Actions`. Save the successfu
 
 **Prediction:** Without the shared S3 backend, GitHub Actions may propose creating a duplicate resource because it cannot access the workstation's local state.
 
-**Observation:** Local state is not shared with GitHub-hosted runners, demonstrating why remote state is necessary.
+**Observation:** After removing the S3 backend and running `terraform init -migrate-state`, Terraform used local state instead of the shared S3 state. GitHub Actions cannot access the workstation's local state file, so its plan may propose creating the existing resource again.
 
-_Update these observations to match your actual experiment results._
+**Explanation:** Remote state allows the workstation and GitHub Actions to share the same infrastructure state. Restoring the S3 backend ensures both environments manage the same resources and prevents duplicate resource creation.
+
+Note: This is the expected result, not a verified observation. Make sure it matches what you actually saw, and restore the S3 backend after the experiment.
 
 ## Cleanup
 
