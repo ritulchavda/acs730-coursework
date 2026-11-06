@@ -76,14 +76,14 @@ LocalStack gives each CI job a disposable, isolated account without real AWS cre
 
 ### 1. Remove depends_on, plan only
 
-Prediction: removing the explicit routing dependency from an already applied configuration will produce no resource changes because the dependency controls ordering rather than resource attributes. Observation: the plan reported **No changes** (`evidence/experiment-no-depends-on.txt`), and the dependency was restored. LocalStack cannot expose the real boot-time race because it does not execute the instance's `dnf` commands; a no-change plan does not prove bootstrapping is safe.
+Prediction: removing the explicit routing dependency from an already applied configuration will produce no resource changes because the dependency controls ordering rather than resource attributes. Observation: the plan reported **No changes**, and the dependency was restored. LocalStack cannot expose the real boot-time race because it does not execute the instance's `dnf` commands; a no-change plan does not prove bootstrapping is safe.
 
 ### 2. Turn the bucket off, then restore it
 
-Prediction: setting `create_artifact_bucket=false` destroys only `aws_s3_bucket.artifacts[0]`; `one(...)` returns null, while a root output with that value disappears. Observation: the plan and apply removed exactly one bucket, `terraform console -plan` printed `null`, and requesting the named root output returned an output-not-found error (`evidence/experiment-bucket-*.txt`). Restoring true planned and created exactly one bucket; the input file and resource configuration were left restored before final teardown.
+Prediction: setting `create_artifact_bucket=false` destroys only `aws_s3_bucket.artifacts[0]`; `one(...)` returns null, while a root output with that value disappears. Observation: the plan and apply removed exactly one bucket, `terraform console -plan` printed `null`, and requesting the named root output returned an output-not-found error. Restoring true planned and created exactly one bucket; the input file and resource configuration were left restored before final teardown.
 
 ## Validation and evidence
 
-The workstation apply created **10 resources**, a repeated plan reported **No changes**, and final destroy removed **10 resources**. The post-destroy JSON contains only LocalStack's default VPC and no lab CIDR. Logs and actual experiment results are in `evidence/`.
+The workstation apply created **10 resources**, a repeated plan reported **No changes**, and final destroy removed **10 resources**. The post-destroy JSON contains only LocalStack's default VPC and no lab CIDR. `evidence/` contains only the required passing/failing CI records, blocked-merge screenshot, `pr-blocked.json`, `ci-runs.txt` and `describe-vpcs-after-destroy.json`.
 
 The PDF walkthrough's `skip_requester_charged` spelling is not an AWS provider option; this implementation uses `skip_requesting_account_id`. The Owner value is a quoted HCL string. `.terraform.lock.hcl` is committed; `.terraform/`, `*.tfstate`, state backups, crash reports and saved plans are ignored.
