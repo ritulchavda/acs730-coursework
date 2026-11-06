@@ -1,0 +1,88 @@
+name: lab5-ci
+
+on:
+  pull_request:
+    paths: ['lab5/**', '.github/workflows/lab5-ci.yml']
+  push:
+    branches: [main]
+    paths: ['lab5/**', '.github/workflows/lab5-ci.yml']
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    working-directory: lab5
+
+jobs:
+  gates:
+    name: fmt and validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.10.3
+          terraform_wrapper: false
+      - name: Check formatting
+        run: terraform fmt -check -recursive
+      - name: Init without a backend
+        run: terraform init -backend=false -input=false -lockfile=readonly
+      - name: Validate
+        run: terraform validate
+      - name: Reject committed state in history
+        run: |
+          # The imported midterm starter included this exact historical blob,
+          # removed before lab5 in 5929081. Do not rewrite previous coursework.
+          # Any other state blob, including a new version at that path, fails.
+          if git rev-list --objects --all \
+            | grep -E '\.tfstate($|\.)' \
+            | grep -v '^5e72dea8be294de7cffea3e47e3a782b89638c55 midterm-practice/terraform/terraform.tfstate$'; then
+            echo 'Terraform state must never be committed.' >&2
+            exit 1
+          fi
+
+  localstack:
+    name: plan and apply against LocalStack
+    needs: gates
+    runs-on: ubuntu-latest
+    services:
+      localstack:
+        image: localstack/localstack:3.8
+        ports: ['4566:4566']
+        env:
+          SERVICES: ec2,s3,sts,iam
+        options: >-
+          --health-cmd "curl -sf http://localhost:4566/_localstack/health"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.10.3
+          terraform_wrapper: false
+      - name: Wait for LocalStack
+        run: |
+          for i in $(seq 1 30); do
+            curl -sf http://localhost:4566/_localstack/health > /dev/null && exit 0
+            sleep 5
+          done
+          echo 'LocalStack never became healthy' >&2
+          exit 1
+      - name: Init
+        run: terraform init -input=false -lockfile=readonly
+      - name: Plan
+        run: terraform plan -input=false -var-file=localstack.tfvars -out=tfplan
+      - name: Apply saved plan
+        run: terraform apply -input=false -auto-approve tfplan
+      - name: Show and verify target
+        run: |
+          terraform output
+          test "$(terraform output -raw provider_target)" = 'localstack (http://localhost:4566)'
+      - name: Destroy emulator resources
+        if: always()
+        run: terraform destroy -input=false -auto-approve -var-file=localstack.tfvars

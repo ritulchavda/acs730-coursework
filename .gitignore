@@ -6,3 +6,11 @@
 credentials
 **/tfplan
 **/tfplan.*
+.terraform/
+*.tfstate
+*.tfstate.*
+tfplan
+crash.log
+
+# Terraform crash reports
+crash.*.log
