@@ -1,0 +1,2 @@
+completed	failure	Lab 5: Terraform network with LocalStack CI	lab5-ci	lab5	pull_request	42259902646	18s	2026-11-06T17:15:06Z
+completed	success	Lab 5: Terraform network with LocalStack CI	lab5-ci	lab5	pull_request	42259486992	2m11s	2026-11-06T17:12:26Z

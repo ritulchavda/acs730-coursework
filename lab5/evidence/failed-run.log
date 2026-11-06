@@ -1,0 +1,14 @@
+fmt and validate	Validate	﻿2026-11-06T17:15:20.0369109Z ##[group]Run terraform validate
+fmt and validate	Validate	2026-11-06T17:15:20.0369487Z ^[[36;1mterraform validate^[[0m
+fmt and validate	Validate	2026-11-06T17:15:20.0400282Z shell: /usr/bin/bash -e {0}
+fmt and validate	Validate	2026-11-06T17:15:20.0400744Z ##[endgroup]
+fmt and validate	Validate	2026-11-06T17:15:21.7362020Z ^[[31m╷^[[0m^[[0m
+fmt and validate	Validate	2026-11-06T17:15:21.7363373Z ^[[31m│^[[0m ^[[0m^[[1m^[[31mError: ^[[0m^[[0m^[[1mReference to undeclared input variable^[[0m
+fmt and validate	Validate	2026-11-06T17:15:21.7364571Z ^[[31m│^[[0m ^[[0m
+fmt and validate	Validate	2026-11-06T17:15:21.7365629Z ^[[31m│^[[0m ^[[0m^[[0m  on network.tf line 29, in resource "aws_vpc" "main":
+fmt and validate	Validate	2026-11-06T17:15:21.7367060Z ^[[31m│^[[0m ^[[0m  29:   cidr_block           = ^[[4mvar.vpc_cdir^[[0m^[[0m
+fmt and validate	Validate	2026-11-06T17:15:21.7368330Z ^[[31m│^[[0m ^[[0m
+fmt and validate	Validate	2026-11-06T17:15:21.7369230Z ^[[31m│^[[0m ^[[0mAn input variable with the name "vpc_cdir" has not been declared. Did you
+fmt and validate	Validate	2026-11-06T17:15:21.7370183Z ^[[31m│^[[0m ^[[0mmean "vpc_cidr"?
+fmt and validate	Validate	2026-11-06T17:15:21.7370882Z ^[[31m╵^[[0m^[[0m
+fmt and validate	Validate	2026-11-06T17:15:21.7536999Z ##[error]Process completed with exit code 1.
