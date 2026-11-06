@@ -1,0 +1,38 @@
+aws_s3_bucket.artifacts[0]: Creating...
+aws_vpc.main: Creating...
+aws_s3_bucket.artifacts[0]: Creation complete after 1s [id=acs730-lab5-rschavda1-artifacts]
+aws_vpc.main: Still creating... [10s elapsed]
+aws_vpc.main: Creation complete after 10s [id=vpc-ae3e2456]
+aws_internet_gateway.main: Creating...
+aws_subnet.public["b"]: Creating...
+aws_security_group.web: Creating...
+aws_subnet.public["a"]: Creating...
+aws_internet_gateway.main: Creation complete after 1s [id=igw-e070e492]
+aws_route_table.public: Creating...
+aws_route_table.public: Creation complete after 0s [id=rtb-a43d04af]
+aws_security_group.web: Creation complete after 1s [id=sg-bcb4c0feaa706abda]
+aws_subnet.public["b"]: Still creating... [10s elapsed]
+aws_subnet.public["a"]: Still creating... [10s elapsed]
+aws_subnet.public["b"]: Creation complete after 11s [id=subnet-c25a9768]
+aws_subnet.public["a"]: Creation complete after 11s [id=subnet-659a57de]
+aws_route_table_association.public["a"]: Creating...
+aws_route_table_association.public["b"]: Creating...
+aws_route_table_association.public["b"]: Creation complete after 0s [id=rtbassoc-5a385218]
+aws_route_table_association.public["a"]: Creation complete after 0s [id=rtbassoc-e4bf8239]
+aws_instance.web: Creating...
+aws_instance.web: Still creating... [10s elapsed]
+aws_instance.web: Creation complete after 10s [id=i-6b46df9fc1c377110]
+
+Apply complete! Resources: 10 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+artifact_bucket = "acs730-lab5-rschavda1-artifacts"
+provider_target = "localstack (http://localhost:4566)"
+subnet_ids = {
+  "a" = "subnet-659a57de"
+  "b" = "subnet-c25a9768"
+}
+vpc_id = "vpc-ae3e2456"
+web_public_ip = "54.214.112.27"
+web_url = "http://54.214.112.27/"

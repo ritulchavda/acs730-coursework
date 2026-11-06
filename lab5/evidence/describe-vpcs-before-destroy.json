@@ -1,0 +1,65 @@
+{
+    "Vpcs": [
+        {
+            "OwnerId": "000000000000",
+            "InstanceTenancy": "default",
+            "Ipv6CidrBlockAssociationSet": [],
+            "CidrBlockAssociationSet": [
+                {
+                    "AssociationId": "vpc-cidr-assoc-a4c2c784",
+                    "CidrBlock": "172.31.0.0/16",
+                    "CidrBlockState": {
+                        "State": "associated"
+                    }
+                }
+            ],
+            "IsDefault": true,
+            "Tags": [],
+            "VpcId": "vpc-2c43ac96",
+            "State": "available",
+            "CidrBlock": "172.31.0.0/16",
+            "DhcpOptionsId": "default"
+        },
+        {
+            "OwnerId": "000000000000",
+            "InstanceTenancy": "default",
+            "Ipv6CidrBlockAssociationSet": [],
+            "CidrBlockAssociationSet": [
+                {
+                    "AssociationId": "vpc-cidr-assoc-b23722b4",
+                    "CidrBlock": "10.42.0.0/16",
+                    "CidrBlockState": {
+                        "State": "associated"
+                    }
+                }
+            ],
+            "IsDefault": false,
+            "Tags": [
+                {
+                    "Key": "Course",
+                    "Value": "ACS730"
+                },
+                {
+                    "Key": "Lab",
+                    "Value": "lab5"
+                },
+                {
+                    "Key": "Managed",
+                    "Value": "terraform"
+                },
+                {
+                    "Key": "Name",
+                    "Value": "acs730-lab5-rschavda1-vpc"
+                },
+                {
+                    "Key": "Owner",
+                    "Value": "rschavda1"
+                }
+            ],
+            "VpcId": "vpc-ae3e2456",
+            "State": "available",
+            "CidrBlock": "10.42.0.0/16",
+            "DhcpOptionsId": "default"
+        }
+    ]
+}

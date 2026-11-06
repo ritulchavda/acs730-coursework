@@ -1,0 +1,15 @@
+aws_s3_bucket.artifacts[0]: Destroying... [id=acs730-lab5-rschavda1-artifacts]
+aws_s3_bucket.artifacts[0]: Destruction complete after 0s
+
+Apply complete! Resources: 0 added, 0 changed, 1 destroyed.
+
+Outputs:
+
+provider_target = "localstack (http://localhost:4566)"
+subnet_ids = {
+  "a" = "subnet-659a57de"
+  "b" = "subnet-c25a9768"
+}
+vpc_id = "vpc-ae3e2456"
+web_public_ip = "54.214.112.27"
+web_url = "http://54.214.112.27/"
