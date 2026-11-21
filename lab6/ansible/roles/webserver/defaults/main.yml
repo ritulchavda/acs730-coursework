@@ -1,0 +1,6 @@
+---
+webserver_package: nginx
+webserver_service: nginx
+webserver_index_path: /usr/share/nginx/html/index.html
+webserver_title: ACS730 Lab 6
+webserver_heading: ACS730 Lab 6 Web Server

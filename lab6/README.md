@@ -1,5 +1,1 @@
-# Lab 6
-
-Instructions for this section will be provided in class and on Blackboard when we reach it.
-
-Put your work for Lab 6 in this folder.
+The GitHub-hosted runner uses Ansible over AWS Systems Manager because it can configure the tagged EC2 instance with no port 22 ingress. A second Ansible run reporting `changed=0` shows that the target was already in the desired state. Deregistering the AMI alone can leave its EBS snapshots behind, so those snapshots must also be deleted.

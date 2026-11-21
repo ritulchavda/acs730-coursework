@@ -1,0 +1,61 @@
+name: Lab 6 Configure
+
+on:
+  push:
+    branches: [main]
+    paths: ['lab6/**']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lab6-configure
+  cancel-in-progress: false
+
+jobs:
+  configure:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      AWS_DEFAULT_REGION: us-east-1
+      AWS_PAGER: ""
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Configure temporary AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: us-east-1
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
+
+      - name: Install Ansible and Session Manager plugin
+        run: |
+          python -m pip install 'ansible-core~=2.20.0' 'boto3>=1.38.23'
+          ansible-galaxy collection install 'amazon.aws:>=11.3.0,<13.0.0'
+          curl -fsSL \
+            https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb \
+            -o /tmp/session-manager-plugin.deb
+          sudo dpkg -i /tmp/session-manager-plugin.deb
+          session-manager-plugin
+
+      - name: Discover targets, wait for SSM, and apply the role
+        working-directory: lab6/ansible
+        run: |
+          account_id=$(aws sts get-caller-identity --query Account --output text)
+          export LAB6_SSM_BUCKET="acs730-lab6-ssm-${account_id}"
+
+          ansible-inventory --graph
+          inventory=$(ansible-inventory --list)
+          hosts=$(jq -er '.role_web.hosts | select(length > 0) | join(" ")' <<< "$inventory")
+          read -r -a instance_ids <<< "$hosts"
+
+          bash ../scripts/wait-ssm.sh "${instance_ids[@]}"
+          ansible-playbook site.yml

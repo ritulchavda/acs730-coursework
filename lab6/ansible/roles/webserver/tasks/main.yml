@@ -1,0 +1,20 @@
+---
+- name: Install the web server package
+  ansible.builtin.dnf:
+    name: "{{ webserver_package }}"
+    state: present
+
+- name: Deploy the web page
+  ansible.builtin.template:
+    src: index.html.j2
+    dest: "{{ webserver_index_path }}"
+    owner: root
+    group: root
+    mode: "0644"
+  notify: Reload web server
+
+- name: Enable and start the web server
+  ansible.builtin.systemd_service:
+    name: "{{ webserver_service }}"
+    enabled: true
+    state: started

@@ -1,0 +1,1 @@
+remove_bucket: acs730-lab6-ssm-231074812996

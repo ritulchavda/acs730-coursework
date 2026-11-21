@@ -1,0 +1,18 @@
+
+PLAY [Configure Lab 6 web targets] *********************************************
+
+TASK [webserver : Install the web server package] ******************************
+ok: [i-014a656f9a4383c60]
+
+TASK [webserver : Deploy the web page] *****************************************
+changed: [i-014a656f9a4383c60]
+
+TASK [webserver : Enable and start the web server] *****************************
+changed: [i-014a656f9a4383c60]
+
+RUNNING HANDLER [webserver : Reload web server] ********************************
+changed: [i-014a656f9a4383c60]
+
+PLAY RECAP *********************************************************************
+i-014a656f9a4383c60        : ok=4    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

@@ -1,0 +1,7 @@
+---
+- name: Configure Lab 6 web targets
+  hosts: role_web
+  become: true
+  gather_facts: false
+  roles:
+    - webserver
