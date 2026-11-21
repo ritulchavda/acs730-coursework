@@ -1,0 +1,8 @@
+stock: launched i-08230bb0a6efd43f4 from ami-0aacbf72109c53c0c
+i-08230bb0a6efd43f4 PingStatus: Online
+stock boot-to-ready: 38.50 seconds
+golden: launched i-080490ab639562f78 from ami-095e102a01886bce6
+i-080490ab639562f78 PingStatus: Online
+golden boot-to-ready: 10.26 seconds
+i-08230bb0a6efd43f4	i-080490ab639562f78
+Benchmark instances terminated: i-08230bb0a6efd43f4 i-080490ab639562f78
