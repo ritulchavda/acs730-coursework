@@ -11,6 +11,7 @@ module "web" {
   source = "../modules/web"
 
   project       = "acs730-a1-staging"
+  environment   = "staging"
   owner         = var.owner
   instance_type = "t3.micro"
   vpc_cidr      = "10.43.0.0/16"
