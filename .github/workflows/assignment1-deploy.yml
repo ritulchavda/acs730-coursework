@@ -1,0 +1,54 @@
+name: Assignment 1 Deploy
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'assignment1/**'
+      - '!assignment1/evidence/**'
+      - '!assignment1/REPORT.md'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: assignment1-deploy
+  cancel-in-progress: false
+
+env:
+  TF_VAR_owner: ${{ vars.ASSIGNMENT1_TF_OWNER }}
+
+jobs:
+  staging:
+    runs-on: ubuntu-latest
+    environment: staging
+    defaults:
+      run:
+        working-directory: assignment1/terraform/staging
+    steps: &deploy_steps
+      - uses: actions/checkout@v4
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
+          aws-region: us-east-1
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: '1.10.3'
+          terraform_wrapper: false
+      - name: Plan and apply
+        run: |
+          : "${TF_VAR_owner:?Set the ASSIGNMENT1_TF_OWNER repository variable}"
+          terraform init -input=false -no-color
+          terraform plan -input=false -no-color -lock-timeout=2m -out=tfplan
+          terraform apply -input=false -no-color -lock-timeout=2m tfplan
+
+  prod:
+    needs: staging
+    runs-on: ubuntu-latest
+    environment: prod
+    defaults:
+      run:
+        working-directory: assignment1/terraform/prod
+    steps: *deploy_steps
