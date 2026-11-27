@@ -2,7 +2,7 @@ name: lab5-ci
 
 on:
   pull_request:
-    paths: ['lab5/**', '.github/workflows/lab5-ci.yml']
+    paths: ['lab5/**', 'assignment1/**', '.github/workflows/lab5-ci.yml']
   push:
     branches: [main]
     paths: ['lab5/**', '.github/workflows/lab5-ci.yml']
