@@ -1,0 +1,6 @@
+=== Staging ===
+staging	Plan and apply	2026-11-27T23:42:43.2486286Z module.web.data.aws_ssm_parameter.db_password: Read complete after 0s [id=/acs730/assignment1/staging/db-password]
+staging	Plan and apply	2026-11-27T23:42:48.3298542Z Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+=== Prod ===
+prod	Plan and apply	2026-11-27T23:44:10.5672915Z module.web.data.aws_ssm_parameter.db_password: Read complete after 1s [id=/acs730/assignment1/prod/db-password]
+prod	Plan and apply	2026-11-27T23:44:16.2265650Z Apply complete! Resources: 1 added, 0 changed, 0 destroyed.

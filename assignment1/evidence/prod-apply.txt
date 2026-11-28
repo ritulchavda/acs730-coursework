@@ -1,0 +1,516 @@
+prod	Set up job	﻿2026-11-27T23:31:56.9528265Z Current runner version: '2.338.2'
+prod	Set up job	2026-11-27T23:31:56.9548349Z ##[group]Runner Image Provisioner
+prod	Set up job	2026-11-27T23:31:56.9549191Z Hosted Compute Agent
+prod	Set up job	2026-11-27T23:31:56.9549731Z Version: 20261111.635
+prod	Set up job	2026-11-27T23:31:56.9550309Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+prod	Set up job	2026-11-27T23:31:56.9550970Z Build Date: 2026-11-11T01:49:01Z
+prod	Set up job	2026-11-27T23:31:56.9551650Z Worker ID: {b28e1ada-111b-457e-be76-c8ad73d1ef8e}
+prod	Set up job	2026-11-27T23:31:56.9552271Z Region: centralus
+prod	Set up job	2026-11-27T23:31:56.9552745Z Cloud: Azure
+prod	Set up job	2026-11-27T23:31:56.9553571Z ##[endgroup]
+prod	Set up job	2026-11-27T23:31:56.9555097Z ##[group]Operating System
+prod	Set up job	2026-11-27T23:31:56.9555647Z Ubuntu
+prod	Set up job	2026-11-27T23:31:56.9556151Z 26.04.1
+prod	Set up job	2026-11-27T23:31:56.9556604Z LTS
+prod	Set up job	2026-11-27T23:31:56.9557041Z ##[endgroup]
+prod	Set up job	2026-11-27T23:31:56.9557795Z ##[group]Runner Image
+prod	Set up job	2026-11-27T23:31:56.9558385Z Image: ubuntu-26.04
+prod	Set up job	2026-11-27T23:31:56.9558907Z Version: 20261122.9.1
+prod	Set up job	2026-11-27T23:31:56.9559743Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261122.9/images/ubuntu/Ubuntu2604-Readme.md
+prod	Set up job	2026-11-27T23:31:56.9561176Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261122.9
+prod	Set up job	2026-11-27T23:31:56.9561964Z ##[endgroup]
+prod	Set up job	2026-11-27T23:31:56.9562908Z ##[group]GITHUB_TOKEN Permissions
+prod	Set up job	2026-11-27T23:31:56.9564975Z Contents: read
+prod	Set up job	2026-11-27T23:31:56.9565530Z Metadata: read
+prod	Set up job	2026-11-27T23:31:56.9565983Z ##[endgroup]
+prod	Set up job	2026-11-27T23:31:56.9568020Z Secret source: Actions
+prod	Set up job	2026-11-27T23:31:56.9568799Z Cache mode: write
+prod	Set up job	2026-11-27T23:31:56.9569713Z Prepare workflow directory
+prod	Set up job	2026-11-27T23:31:56.9965082Z Prepare all required actions
+prod	Set up job	2026-11-27T23:31:57.0001590Z Getting action download info
+prod	Set up job	2026-11-27T23:31:57.2705104Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+prod	Set up job	2026-11-27T23:31:57.3462637Z Download action repository 'aws-actions/configure-aws-credentials@v4' (SHA:7474bc4690e29a8392af63c5b98e7449536d5c3a)
+prod	Set up job	2026-11-27T23:31:57.6701564Z Download action repository 'hashicorp/setup-terraform@v3' (SHA:b9cd54a3c349d3f38e8881555d616ced269862dd)
+prod	Set up job	2026-11-27T23:31:58.0835470Z Complete job name: prod
+prod	Run actions/checkout@v4	﻿2026-11-27T23:31:58.1400867Z ##[group]Run actions/checkout@v4
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.1401773Z with:
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.1402221Z   repository: ritulchavda/acs730-coursework
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.1405303Z   token: ***
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.1405733Z   ssh-strict: true
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.1406170Z   ssh-user: git
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.1406638Z   persist-credentials: true
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.1407102Z   clean: true
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.1407726Z   sparse-checkout-cone-mode: true
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.1408297Z   fetch-depth: 1
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.1408696Z   fetch-tags: false
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.1409142Z   show-progress: true
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.1409600Z   lfs: false
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.1410007Z   submodules: false
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.1410522Z   set-safe-directory: true
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.1410969Z   allow-unsafe-pr-checkout: false
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.1411659Z env:
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.1412049Z   TF_VAR_owner: rschavda1
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.1412528Z ##[endgroup]
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.3701045Z Syncing repository: ritulchavda/acs730-coursework
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.3703520Z ##[group]Getting Git version info
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.3704420Z Working directory is '/home/runner/work/acs730-coursework/acs730-coursework'
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.3705687Z [command]/usr/bin/git version
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.3714268Z git version 2.56.1
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.3735612Z ##[endgroup]
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.3741486Z Temporarily overriding HOME='/home/runner/work/_temp/6873adb3-0fb1-40ca-be29-817e42d0d5e4' before making global git config changes
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.3747745Z Adding repository directory to the temporary git global config as a safe directory
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.3749128Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/acs730-coursework/acs730-coursework
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.3801240Z Deleting the contents of '/home/runner/work/acs730-coursework/acs730-coursework'
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.3803776Z ##[group]Initializing the repository
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.3807999Z [command]/usr/bin/git init /home/runner/work/acs730-coursework/acs730-coursework
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.3891633Z hint: Using 'master' as the name for the initial branch. This default branch name
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.3892650Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.3893570Z hint: to use in all of your new repositories, which will suppress this warning,
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.3894213Z hint: call:
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.3894604Z hint:
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.3895144Z hint: 	git config --global init.defaultBranch <name>
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.3895785Z hint:
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.3896259Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.3896976Z hint: 'development'. The just-created branch can be renamed via this command:
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.3897889Z hint:
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.3898399Z hint: 	git branch -m <name>
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.3898924Z hint:
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.3899619Z hint: Disable this message with "git config set advice.defaultBranchName false"
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.3901243Z Initialized empty Git repository in /home/runner/work/acs730-coursework/acs730-coursework/.git/
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.3911447Z [command]/usr/bin/git remote add origin https://github.com/ritulchavda/acs730-coursework
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.3954341Z ##[endgroup]
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.3955273Z ##[group]Disabling automatic garbage collection
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.3956961Z [command]/usr/bin/git config --local gc.auto 0
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.3988454Z ##[endgroup]
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.3990128Z ##[group]Setting up auth
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.3999741Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.4034249Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.4367230Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.4399041Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.4586127Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.4610130Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.4784214Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.4814449Z ##[endgroup]
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.4815259Z ##[group]Fetching the repository
+prod	Run actions/checkout@v4	2026-11-27T23:31:58.4821306Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +db2fbf86d75d007465eacf401135b7cb3569ee04:refs/remotes/origin/main
+prod	Run actions/checkout@v4	2026-11-27T23:31:59.1286514Z From https://github.com/ritulchavda/acs730-coursework
+prod	Run actions/checkout@v4	2026-11-27T23:31:59.1288723Z  * [new ref]         db2fbf86d75d007465eacf401135b7cb3569ee04 -> origin/main
+prod	Run actions/checkout@v4	2026-11-27T23:31:59.1292339Z ##[endgroup]
+prod	Run actions/checkout@v4	2026-11-27T23:31:59.1293999Z ##[group]Determining the checkout info
+prod	Run actions/checkout@v4	2026-11-27T23:31:59.1295981Z ##[endgroup]
+prod	Run actions/checkout@v4	2026-11-27T23:31:59.1300786Z [command]/usr/bin/git sparse-checkout disable
+prod	Run actions/checkout@v4	2026-11-27T23:31:59.1352736Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+prod	Run actions/checkout@v4	2026-11-27T23:31:59.1378326Z ##[group]Checking out the ref
+prod	Run actions/checkout@v4	2026-11-27T23:31:59.1388139Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+prod	Run actions/checkout@v4	2026-11-27T23:31:59.1598002Z Switched to a new branch 'main'
+prod	Run actions/checkout@v4	2026-11-27T23:31:59.1603133Z branch 'main' set up to track 'origin/main'.
+prod	Run actions/checkout@v4	2026-11-27T23:31:59.1607739Z ##[endgroup]
+prod	Run actions/checkout@v4	2026-11-27T23:31:59.1640861Z [command]/usr/bin/git log -1 --format=%H
+prod	Run actions/checkout@v4	2026-11-27T23:31:59.1658367Z db2fbf86d75d007465eacf401135b7cb3569ee04
+prod	Run aws-actions/configure-aws-credentials@v4	﻿2026-11-27T23:31:59.1979044Z ##[group]Run aws-actions/configure-aws-credentials@v4
+prod	Run aws-actions/configure-aws-credentials@v4	2026-11-27T23:31:59.1980273Z with:
+prod	Run aws-actions/configure-aws-credentials@v4	2026-11-27T23:31:59.1981294Z   aws-access-key-id: ***
+prod	Run aws-actions/configure-aws-credentials@v4	2026-11-27T23:31:59.1982418Z   aws-secret-access-key: ***
+prod	Run aws-actions/configure-aws-credentials@v4	2026-11-27T23:31:59.1993439Z   aws-session-token: ***
+prod	Run aws-actions/configure-aws-credentials@v4	2026-11-27T23:31:59.1994307Z   aws-region: us-east-1
+prod	Run aws-actions/configure-aws-credentials@v4	2026-11-27T23:31:59.1995187Z   audience: sts.amazonaws.com
+prod	Run aws-actions/configure-aws-credentials@v4	2026-11-27T23:31:59.1996163Z   output-env-credentials: true
+prod	Run aws-actions/configure-aws-credentials@v4	2026-11-27T23:31:59.1997010Z env:
+prod	Run aws-actions/configure-aws-credentials@v4	2026-11-27T23:31:59.1997850Z   TF_VAR_owner: rschavda1
+prod	Run aws-actions/configure-aws-credentials@v4	2026-11-27T23:31:59.1998749Z ##[endgroup]
+prod	Run aws-actions/configure-aws-credentials@v4	2026-11-27T23:31:59.4611361Z Proceeding with IAM user credentials
+prod	Run hashicorp/setup-terraform@v3	﻿2026-11-27T23:31:59.4761280Z ##[group]Run hashicorp/setup-terraform@v3
+prod	Run hashicorp/setup-terraform@v3	2026-11-27T23:31:59.4762242Z with:
+prod	Run hashicorp/setup-terraform@v3	2026-11-27T23:31:59.4762973Z   terraform_version: 1.10.3
+prod	Run hashicorp/setup-terraform@v3	2026-11-27T23:31:59.4763785Z   terraform_wrapper: false
+prod	Run hashicorp/setup-terraform@v3	2026-11-27T23:31:59.4764709Z   cli_config_credentials_hostname: app.terraform.io
+prod	Run hashicorp/setup-terraform@v3	2026-11-27T23:31:59.4765727Z env:
+prod	Run hashicorp/setup-terraform@v3	2026-11-27T23:31:59.4766387Z   TF_VAR_owner: rschavda1
+prod	Run hashicorp/setup-terraform@v3	2026-11-27T23:31:59.4767211Z   AWS_DEFAULT_REGION: us-east-1
+prod	Run hashicorp/setup-terraform@v3	2026-11-27T23:31:59.4768279Z   AWS_REGION: us-east-1
+prod	Run hashicorp/setup-terraform@v3	2026-11-27T23:31:59.4769616Z   AWS_ACCESS_KEY_ID: ***
+prod	Run hashicorp/setup-terraform@v3	2026-11-27T23:31:59.4770691Z   AWS_SECRET_ACCESS_KEY: ***
+prod	Run hashicorp/setup-terraform@v3	2026-11-27T23:31:59.4780728Z   AWS_SESSION_TOKEN: ***
+prod	Run hashicorp/setup-terraform@v3	2026-11-27T23:31:59.4781576Z ##[endgroup]
+prod	Run hashicorp/setup-terraform@v3	2026-11-27T23:31:59.5780376Z (node:2225) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+prod	Run hashicorp/setup-terraform@v3	2026-11-27T23:31:59.5783282Z (Use `node --trace-deprecation ...` to show where the warning was created)
+prod	Run hashicorp/setup-terraform@v3	2026-11-27T23:31:59.8643437Z [command]/usr/bin/unzip -o -q /home/runner/work/_temp/da8bc0fe-3b8d-4e94-9b82-e36389867b67
+prod	Plan and apply	﻿2026-11-27T23:32:00.4084161Z ##[group]Run : "${TF_VAR_owner:?Set the ASSIGNMENT1_TF_OWNER repository variable}"
+prod	Plan and apply	2026-11-27T23:32:00.4084900Z ^[[36;1m: "${TF_VAR_owner:?Set the ASSIGNMENT1_TF_OWNER repository variable}"^[[0m
+prod	Plan and apply	2026-11-27T23:32:00.4085412Z ^[[36;1mterraform init -input=false -no-color^[[0m
+prod	Plan and apply	2026-11-27T23:32:00.4085884Z ^[[36;1mterraform plan -input=false -no-color -lock-timeout=2m -out=tfplan^[[0m
+prod	Plan and apply	2026-11-27T23:32:00.4086393Z ^[[36;1mterraform apply -input=false -no-color -lock-timeout=2m tfplan^[[0m
+prod	Plan and apply	2026-11-27T23:32:00.4112999Z shell: /usr/bin/bash -e {0}
+prod	Plan and apply	2026-11-27T23:32:00.4113503Z env:
+prod	Plan and apply	2026-11-27T23:32:00.4113825Z   TF_VAR_owner: rschavda1
+prod	Plan and apply	2026-11-27T23:32:00.4114164Z   AWS_DEFAULT_REGION: us-east-1
+prod	Plan and apply	2026-11-27T23:32:00.4114511Z   AWS_REGION: us-east-1
+prod	Plan and apply	2026-11-27T23:32:00.4115125Z   AWS_ACCESS_KEY_ID: ***
+prod	Plan and apply	2026-11-27T23:32:00.4115535Z   AWS_SECRET_ACCESS_KEY: ***
+prod	Plan and apply	2026-11-27T23:32:00.4118596Z   AWS_SESSION_TOKEN: ***
+prod	Plan and apply	2026-11-27T23:32:00.4118988Z ##[endgroup]
+prod	Plan and apply	2026-11-27T23:32:00.4428522Z Initializing the backend...
+prod	Plan and apply	2026-11-27T23:32:00.8409358Z
+prod	Plan and apply	2026-11-27T23:32:00.8410993Z Successfully configured the backend "s3"! Terraform will automatically
+prod	Plan and apply	2026-11-27T23:32:00.8411680Z use this backend unless the backend configuration changes.
+prod	Plan and apply	2026-11-27T23:32:00.9442466Z Initializing modules...
+prod	Plan and apply	2026-11-27T23:32:00.9468591Z - web in ../modules/web
+prod	Plan and apply	2026-11-27T23:32:00.9479482Z Initializing provider plugins...
+prod	Plan and apply	2026-11-27T23:32:00.9479994Z - Reusing previous version of hashicorp/aws from the dependency lock file
+prod	Plan and apply	2026-11-27T23:32:01.1652744Z - Installing hashicorp/aws v5.100.0...
+prod	Plan and apply	2026-11-27T23:32:06.5770905Z - Installed hashicorp/aws v5.100.0 (signed by HashiCorp)
+prod	Plan and apply	2026-11-27T23:32:06.5771885Z
+prod	Plan and apply	2026-11-27T23:32:06.5772773Z Terraform has been successfully initialized!
+prod	Plan and apply	2026-11-27T23:32:06.5773202Z
+prod	Plan and apply	2026-11-27T23:32:06.5773480Z You may now begin working with Terraform. Try running "terraform plan" to see
+prod	Plan and apply	2026-11-27T23:32:06.5774170Z any changes that are required for your infrastructure. All Terraform commands
+prod	Plan and apply	2026-11-27T23:32:06.5774706Z should now work.
+prod	Plan and apply	2026-11-27T23:32:06.5774901Z
+prod	Plan and apply	2026-11-27T23:32:06.5775148Z If you ever set or change modules or backend configuration for Terraform,
+prod	Plan and apply	2026-11-27T23:32:06.5775685Z rerun this command to reinitialize your working directory. If you forget, other
+prod	Plan and apply	2026-11-27T23:32:06.5776661Z commands will detect it and remind you to do so if necessary.
+prod	Plan and apply	2026-11-27T23:32:08.9100058Z module.web.data.aws_ami.al2023[0]: Reading...
+prod	Plan and apply	2026-11-27T23:32:08.9101246Z module.web.data.aws_availability_zones.available: Reading...
+prod	Plan and apply	2026-11-27T23:32:08.9102132Z module.web.data.aws_region.current: Reading...
+prod	Plan and apply	2026-11-27T23:32:08.9128329Z module.web.data.aws_region.current: Read complete after 0s [id=us-east-1]
+prod	Plan and apply	2026-11-27T23:32:09.0758044Z module.web.data.aws_availability_zones.available: Read complete after 0s [id=us-east-1]
+prod	Plan and apply	2026-11-27T23:32:09.4354323Z module.web.data.aws_ami.al2023[0]: Read complete after 0s [id=ami-02771ddfb8e749b97]
+prod	Plan and apply	2026-11-27T23:32:09.5495803Z
+prod	Plan and apply	2026-11-27T23:32:09.5496525Z Terraform used the selected providers to generate the following execution
+prod	Plan and apply	2026-11-27T23:32:09.5497192Z plan. Resource actions are indicated with the following symbols:
+prod	Plan and apply	2026-11-27T23:32:09.5497845Z   + create
+prod	Plan and apply	2026-11-27T23:32:09.5498191Z
+prod	Plan and apply	2026-11-27T23:32:09.5498438Z Terraform will perform the following actions:
+prod	Plan and apply	2026-11-27T23:32:09.5498771Z
+prod	Plan and apply	2026-11-27T23:32:09.5499009Z   # module.web.aws_instance.web will be created
+prod	Plan and apply	2026-11-27T23:32:09.5499398Z   + resource "aws_instance" "web" {
+prod	Plan and apply	2026-11-27T23:32:09.5499788Z       + ami                                  = "ami-02771ddfb8e749b97"
+prod	Plan and apply	2026-11-27T23:32:09.5500242Z       + arn                                  = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5500687Z       + associate_public_ip_address          = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5501173Z       + availability_zone                    = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5501563Z       + cpu_core_count                       = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5501986Z       + cpu_threads_per_core                 = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5502766Z       + disable_api_stop                     = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5503196Z       + disable_api_termination              = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5503528Z       + ebs_optimized                        = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5504066Z       + enable_primary_ipv6                  = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5504460Z       + get_password_data                    = false
+prod	Plan and apply	2026-11-27T23:32:09.5504884Z       + host_id                              = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5505285Z       + host_resource_group_arn              = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5505622Z       + iam_instance_profile                 = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5505996Z       + id                                   = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5506372Z       + instance_initiated_shutdown_behavior = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5506704Z       + instance_lifecycle                   = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5507052Z       + instance_state                       = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5507558Z       + instance_type                        = "t3.micro"
+prod	Plan and apply	2026-11-27T23:32:09.5508031Z       + ipv6_address_count                   = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5508542Z       + ipv6_addresses                       = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5508966Z       + key_name                             = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5509382Z       + monitoring                           = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5509793Z       + outpost_arn                          = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5510180Z       + password_data                        = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5510585Z       + placement_group                      = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5511029Z       + placement_partition_number           = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5511479Z       + primary_network_interface_id         = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5511986Z       + private_dns                          = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5512378Z       + private_ip                           = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5512681Z       + public_dns                           = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5513187Z       + public_ip                            = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5513539Z       + secondary_private_ips                = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5513915Z       + security_groups                      = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5514224Z       + source_dest_check                    = true
+prod	Plan and apply	2026-11-27T23:32:09.5514575Z       + spot_instance_request_id             = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5514907Z       + subnet_id                            = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5515199Z       + tags                                 = {
+prod	Plan and apply	2026-11-27T23:32:09.5515532Z           + "Lab"     = "lab5"
+prod	Plan and apply	2026-11-27T23:32:09.5515793Z           + "Managed" = "terraform"
+prod	Plan and apply	2026-11-27T23:32:09.5516084Z           + "Name"    = "acs730-a1-prod-rschavda1-web"
+prod	Plan and apply	2026-11-27T23:32:09.5516393Z         }
+prod	Plan and apply	2026-11-27T23:32:09.5516603Z       + tags_all                             = {
+prod	Plan and apply	2026-11-27T23:32:09.5516913Z           + "Lab"     = "lab5"
+prod	Plan and apply	2026-11-27T23:32:09.5517194Z           + "Managed" = "terraform"
+prod	Plan and apply	2026-11-27T23:32:09.5517682Z           + "Name"    = "acs730-a1-prod-rschavda1-web"
+prod	Plan and apply	2026-11-27T23:32:09.5517967Z         }
+prod	Plan and apply	2026-11-27T23:32:09.5518304Z       + tenancy                              = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5518670Z       + user_data                            = "394c23ed9a8606ff2e75143feab7d035de5333ae"
+prod	Plan and apply	2026-11-27T23:32:09.5519023Z       + user_data_base64                     = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5519372Z       + user_data_replace_on_change          = true
+prod	Plan and apply	2026-11-27T23:32:09.5519688Z       + vpc_security_group_ids               = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5519884Z
+prod	Plan and apply	2026-11-27T23:32:09.5520205Z       + capacity_reservation_specification (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5520388Z
+prod	Plan and apply	2026-11-27T23:32:09.5520513Z       + cpu_options (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5520688Z
+prod	Plan and apply	2026-11-27T23:32:09.5520775Z       + ebs_block_device (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5520991Z
+prod	Plan and apply	2026-11-27T23:32:09.5521113Z       + enclave_options (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5521264Z
+prod	Plan and apply	2026-11-27T23:32:09.5521419Z       + ephemeral_block_device (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5521683Z
+prod	Plan and apply	2026-11-27T23:32:09.5521817Z       + instance_market_options (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5522006Z
+prod	Plan and apply	2026-11-27T23:32:09.5522141Z       + maintenance_options (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5522349Z
+prod	Plan and apply	2026-11-27T23:32:09.5522467Z       + metadata_options (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5522757Z
+prod	Plan and apply	2026-11-27T23:32:09.5522890Z       + network_interface (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5523091Z
+prod	Plan and apply	2026-11-27T23:32:09.5523192Z       + private_dns_name_options (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5523420Z
+prod	Plan and apply	2026-11-27T23:32:09.5523547Z       + root_block_device (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5523804Z     }
+prod	Plan and apply	2026-11-27T23:32:09.5523930Z
+prod	Plan and apply	2026-11-27T23:32:09.5524071Z   # module.web.aws_internet_gateway.main will be created
+prod	Plan and apply	2026-11-27T23:32:09.5524418Z   + resource "aws_internet_gateway" "main" {
+prod	Plan and apply	2026-11-27T23:32:09.5524687Z       + arn      = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5524961Z       + id       = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5525231Z       + owner_id = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5525503Z       + tags     = {
+prod	Plan and apply	2026-11-27T23:32:09.5525751Z           + "Lab"     = "lab5"
+prod	Plan and apply	2026-11-27T23:32:09.5526037Z           + "Managed" = "terraform"
+prod	Plan and apply	2026-11-27T23:32:09.5526312Z           + "Name"    = "acs730-a1-prod-rschavda1-igw"
+prod	Plan and apply	2026-11-27T23:32:09.5526562Z         }
+prod	Plan and apply	2026-11-27T23:32:09.5526821Z       + tags_all = {
+prod	Plan and apply	2026-11-27T23:32:09.5527065Z           + "Lab"     = "lab5"
+prod	Plan and apply	2026-11-27T23:32:09.5527316Z           + "Managed" = "terraform"
+prod	Plan and apply	2026-11-27T23:32:09.5527771Z           + "Name"    = "acs730-a1-prod-rschavda1-igw"
+prod	Plan and apply	2026-11-27T23:32:09.5528084Z         }
+prod	Plan and apply	2026-11-27T23:32:09.5528327Z       + vpc_id   = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5528576Z     }
+prod	Plan and apply	2026-11-27T23:32:09.5528913Z
+prod	Plan and apply	2026-11-27T23:32:09.5529135Z   # module.web.aws_route_table.public will be created
+prod	Plan and apply	2026-11-27T23:32:09.5529466Z   + resource "aws_route_table" "public" {
+prod	Plan and apply	2026-11-27T23:32:09.5529755Z       + arn              = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5530047Z       + id               = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5530350Z       + owner_id         = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5530637Z       + propagating_vgws = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5530905Z       + route            = [
+prod	Plan and apply	2026-11-27T23:32:09.5531195Z           + {
+prod	Plan and apply	2026-11-27T23:32:09.5531432Z               + cidr_block                 = "0.0.0.0/0"
+prod	Plan and apply	2026-11-27T23:32:09.5531733Z               + gateway_id                 = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5532070Z                 # (11 unchanged attributes hidden)
+prod	Plan and apply	2026-11-27T23:32:09.5532323Z             },
+prod	Plan and apply	2026-11-27T23:32:09.5532568Z         ]
+prod	Plan and apply	2026-11-27T23:32:09.5532805Z       + tags             = {
+prod	Plan and apply	2026-11-27T23:32:09.5533047Z           + "Lab"     = "lab5"
+prod	Plan and apply	2026-11-27T23:32:09.5533294Z           + "Managed" = "terraform"
+prod	Plan and apply	2026-11-27T23:32:09.5533614Z           + "Name"    = "acs730-a1-prod-rschavda1-public-rt"
+prod	Plan and apply	2026-11-27T23:32:09.5533921Z         }
+prod	Plan and apply	2026-11-27T23:32:09.5534132Z       + tags_all         = {
+prod	Plan and apply	2026-11-27T23:32:09.5534407Z           + "Lab"     = "lab5"
+prod	Plan and apply	2026-11-27T23:32:09.5534644Z           + "Managed" = "terraform"
+prod	Plan and apply	2026-11-27T23:32:09.5534947Z           + "Name"    = "acs730-a1-prod-rschavda1-public-rt"
+prod	Plan and apply	2026-11-27T23:32:09.5535257Z         }
+prod	Plan and apply	2026-11-27T23:32:09.5535463Z       + vpc_id           = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5535741Z     }
+prod	Plan and apply	2026-11-27T23:32:09.5535862Z
+prod	Plan and apply	2026-11-27T23:32:09.5536039Z   # module.web.aws_route_table_association.public["a"] will be created
+prod	Plan and apply	2026-11-27T23:32:09.5536486Z   + resource "aws_route_table_association" "public" {
+prod	Plan and apply	2026-11-27T23:32:09.5536775Z       + id             = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5537068Z       + route_table_id = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5537448Z       + subnet_id      = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5537737Z     }
+prod	Plan and apply	2026-11-27T23:32:09.5537993Z
+prod	Plan and apply	2026-11-27T23:32:09.5538205Z   # module.web.aws_route_table_association.public["b"] will be created
+prod	Plan and apply	2026-11-27T23:32:09.5538550Z   + resource "aws_route_table_association" "public" {
+prod	Plan and apply	2026-11-27T23:32:09.5538877Z       + id             = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5539184Z       + route_table_id = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5539456Z       + subnet_id      = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5539725Z     }
+prod	Plan and apply	2026-11-27T23:32:09.5539852Z
+prod	Plan and apply	2026-11-27T23:32:09.5539998Z   # module.web.aws_security_group.web will be created
+prod	Plan and apply	2026-11-27T23:32:09.5540306Z   + resource "aws_security_group" "web" {
+prod	Plan and apply	2026-11-27T23:32:09.5540619Z       + arn                    = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5541446Z       + description            = "Web ingress for ACS730 lab 5"
+prod	Plan and apply	2026-11-27T23:32:09.5541818Z       + egress                 = [
+prod	Plan and apply	2026-11-27T23:32:09.5542093Z           + {
+prod	Plan and apply	2026-11-27T23:32:09.5542390Z               + cidr_blocks      = [
+prod	Plan and apply	2026-11-27T23:32:09.5542687Z                   + "0.0.0.0/0",
+prod	Plan and apply	2026-11-27T23:32:09.5542926Z                 ]
+prod	Plan and apply	2026-11-27T23:32:09.5543342Z               + description      = "All outbound traffic for boot-time package installation"
+prod	Plan and apply	2026-11-27T23:32:09.5543674Z               + from_port        = 0
+prod	Plan and apply	2026-11-27T23:32:09.5543952Z               + ipv6_cidr_blocks = []
+prod	Plan and apply	2026-11-27T23:32:09.5544245Z               + prefix_list_ids  = []
+prod	Plan and apply	2026-11-27T23:32:09.5544515Z               + protocol         = "-1"
+prod	Plan and apply	2026-11-27T23:32:09.5544763Z               + security_groups  = []
+prod	Plan and apply	2026-11-27T23:32:09.5545047Z               + self             = false
+prod	Plan and apply	2026-11-27T23:32:09.5545355Z               + to_port          = 0
+prod	Plan and apply	2026-11-27T23:32:09.5545618Z             },
+prod	Plan and apply	2026-11-27T23:32:09.5545895Z         ]
+prod	Plan and apply	2026-11-27T23:32:09.5546149Z       + id                     = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5546457Z       + ingress                = [
+prod	Plan and apply	2026-11-27T23:32:09.5546780Z           + {
+prod	Plan and apply	2026-11-27T23:32:09.5547104Z               + cidr_blocks      = [
+prod	Plan and apply	2026-11-27T23:32:09.5547670Z                   + "0.0.0.0/0",
+prod	Plan and apply	2026-11-27T23:32:09.5547945Z                 ]
+prod	Plan and apply	2026-11-27T23:32:09.5548253Z               + description      = "HTTP from anywhere"
+prod	Plan and apply	2026-11-27T23:32:09.5548524Z               + from_port        = 80
+prod	Plan and apply	2026-11-27T23:32:09.5548825Z               + ipv6_cidr_blocks = []
+prod	Plan and apply	2026-11-27T23:32:09.5549121Z               + prefix_list_ids  = []
+prod	Plan and apply	2026-11-27T23:32:09.5549405Z               + protocol         = "tcp"
+prod	Plan and apply	2026-11-27T23:32:09.5549724Z               + security_groups  = []
+prod	Plan and apply	2026-11-27T23:32:09.5550033Z               + self             = false
+prod	Plan and apply	2026-11-27T23:32:09.5550347Z               + to_port          = 80
+prod	Plan and apply	2026-11-27T23:32:09.5550771Z             },
+prod	Plan and apply	2026-11-27T23:32:09.5551083Z         ]
+prod	Plan and apply	2026-11-27T23:32:09.5551386Z       + name                   = "acs730-a1-prod-rschavda1-web"
+prod	Plan and apply	2026-11-27T23:32:09.5551705Z       + name_prefix            = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5552085Z       + owner_id               = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5552369Z       + revoke_rules_on_delete = false
+prod	Plan and apply	2026-11-27T23:32:09.5552609Z       + tags                   = {
+prod	Plan and apply	2026-11-27T23:32:09.5552957Z           + "Lab"     = "lab5"
+prod	Plan and apply	2026-11-27T23:32:09.5553234Z           + "Managed" = "terraform"
+prod	Plan and apply	2026-11-27T23:32:09.5553573Z           + "Name"    = "acs730-a1-prod-rschavda1-web-sg"
+prod	Plan and apply	2026-11-27T23:32:09.5553915Z         }
+prod	Plan and apply	2026-11-27T23:32:09.5554167Z       + tags_all               = {
+prod	Plan and apply	2026-11-27T23:32:09.5554448Z           + "Lab"     = "lab5"
+prod	Plan and apply	2026-11-27T23:32:09.5554734Z           + "Managed" = "terraform"
+prod	Plan and apply	2026-11-27T23:32:09.5555068Z           + "Name"    = "acs730-a1-prod-rschavda1-web-sg"
+prod	Plan and apply	2026-11-27T23:32:09.5555374Z         }
+prod	Plan and apply	2026-11-27T23:32:09.5555689Z       + vpc_id                 = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5556089Z     }
+prod	Plan and apply	2026-11-27T23:32:09.5556213Z
+prod	Plan and apply	2026-11-27T23:32:09.5556322Z   # module.web.aws_subnet.public["a"] will be created
+prod	Plan and apply	2026-11-27T23:32:09.5556668Z   + resource "aws_subnet" "public" {
+prod	Plan and apply	2026-11-27T23:32:09.5556979Z       + arn                                            = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5557329Z       + assign_ipv6_address_on_creation                = false
+prod	Plan and apply	2026-11-27T23:32:09.5557877Z       + availability_zone                              = "us-east-1a"
+prod	Plan and apply	2026-11-27T23:32:09.5558248Z       + availability_zone_id                           = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5558611Z       + cidr_block                                     = "10.44.1.0/24"
+prod	Plan and apply	2026-11-27T23:32:09.5558971Z       + enable_dns64                                   = false
+prod	Plan and apply	2026-11-27T23:32:09.5559320Z       + enable_resource_name_dns_a_record_on_launch    = false
+prod	Plan and apply	2026-11-27T23:32:09.5559638Z       + enable_resource_name_dns_aaaa_record_on_launch = false
+prod	Plan and apply	2026-11-27T23:32:09.5560054Z       + id                                             = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5560416Z       + ipv6_cidr_block_association_id                 = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5560789Z       + ipv6_native                                    = false
+prod	Plan and apply	2026-11-27T23:32:09.5561113Z       + map_public_ip_on_launch                        = true
+prod	Plan and apply	2026-11-27T23:32:09.5561431Z       + owner_id                                       = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5561824Z       + private_dns_hostname_type_on_launch            = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5562175Z       + tags                                           = {
+prod	Plan and apply	2026-11-27T23:32:09.5562454Z           + "Lab"     = "lab5"
+prod	Plan and apply	2026-11-27T23:32:09.5562754Z           + "Managed" = "terraform"
+prod	Plan and apply	2026-11-27T23:32:09.5563027Z           + "Name"    = "acs730-a1-prod-rschavda1-public-a"
+prod	Plan and apply	2026-11-27T23:32:09.5563370Z         }
+prod	Plan and apply	2026-11-27T23:32:09.5563601Z       + tags_all                                       = {
+prod	Plan and apply	2026-11-27T23:32:09.5563887Z           + "Lab"     = "lab5"
+prod	Plan and apply	2026-11-27T23:32:09.5564146Z           + "Managed" = "terraform"
+prod	Plan and apply	2026-11-27T23:32:09.5564431Z           + "Name"    = "acs730-a1-prod-rschavda1-public-a"
+prod	Plan and apply	2026-11-27T23:32:09.5564811Z         }
+prod	Plan and apply	2026-11-27T23:32:09.5565068Z       + vpc_id                                         = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5565383Z     }
+prod	Plan and apply	2026-11-27T23:32:09.5565514Z
+prod	Plan and apply	2026-11-27T23:32:09.5565636Z   # module.web.aws_subnet.public["b"] will be created
+prod	Plan and apply	2026-11-27T23:32:09.5565993Z   + resource "aws_subnet" "public" {
+prod	Plan and apply	2026-11-27T23:32:09.5566277Z       + arn                                            = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5566619Z       + assign_ipv6_address_on_creation                = false
+prod	Plan and apply	2026-11-27T23:32:09.5566962Z       + availability_zone                              = "us-east-1b"
+prod	Plan and apply	2026-11-27T23:32:09.5567312Z       + availability_zone_id                           = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5567842Z       + cidr_block                                     = "10.44.2.0/24"
+prod	Plan and apply	2026-11-27T23:32:09.5568161Z       + enable_dns64                                   = false
+prod	Plan and apply	2026-11-27T23:32:09.5568477Z       + enable_resource_name_dns_a_record_on_launch    = false
+prod	Plan and apply	2026-11-27T23:32:09.5568838Z       + enable_resource_name_dns_aaaa_record_on_launch = false
+prod	Plan and apply	2026-11-27T23:32:09.5569133Z       + id                                             = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5569523Z       + ipv6_cidr_block_association_id                 = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5569891Z       + ipv6_native                                    = false
+prod	Plan and apply	2026-11-27T23:32:09.5570212Z       + map_public_ip_on_launch                        = true
+prod	Plan and apply	2026-11-27T23:32:09.5570525Z       + owner_id                                       = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5570914Z       + private_dns_hostname_type_on_launch            = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5571261Z       + tags                                           = {
+prod	Plan and apply	2026-11-27T23:32:09.5571596Z           + "Lab"     = "lab5"
+prod	Plan and apply	2026-11-27T23:32:09.5571876Z           + "Managed" = "terraform"
+prod	Plan and apply	2026-11-27T23:32:09.5572156Z           + "Name"    = "acs730-a1-prod-rschavda1-public-b"
+prod	Plan and apply	2026-11-27T23:32:09.5572451Z         }
+prod	Plan and apply	2026-11-27T23:32:09.5572724Z       + tags_all                                       = {
+prod	Plan and apply	2026-11-27T23:32:09.5572978Z           + "Lab"     = "lab5"
+prod	Plan and apply	2026-11-27T23:32:09.5573244Z           + "Managed" = "terraform"
+prod	Plan and apply	2026-11-27T23:32:09.5573571Z           + "Name"    = "acs730-a1-prod-rschavda1-public-b"
+prod	Plan and apply	2026-11-27T23:32:09.5573853Z         }
+prod	Plan and apply	2026-11-27T23:32:09.5574091Z       + vpc_id                                         = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5574478Z     }
+prod	Plan and apply	2026-11-27T23:32:09.5574621Z
+prod	Plan and apply	2026-11-27T23:32:09.5574755Z   # module.web.aws_vpc.main will be created
+prod	Plan and apply	2026-11-27T23:32:09.5575043Z   + resource "aws_vpc" "main" {
+prod	Plan and apply	2026-11-27T23:32:09.5575365Z       + arn                                  = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5575680Z       + cidr_block                           = "10.44.0.0/16"
+prod	Plan and apply	2026-11-27T23:32:09.5575998Z       + default_network_acl_id               = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5576369Z       + default_route_table_id               = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5576703Z       + default_security_group_id            = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5577049Z       + dhcp_options_id                      = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5577468Z       + enable_dns_hostnames                 = true
+prod	Plan and apply	2026-11-27T23:32:09.5577786Z       + enable_dns_support                   = true
+prod	Plan and apply	2026-11-27T23:32:09.5578111Z       + enable_network_address_usage_metrics = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5578455Z       + id                                   = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5578767Z       + instance_tenancy                     = "default"
+prod	Plan and apply	2026-11-27T23:32:09.5579078Z       + ipv6_association_id                  = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5579453Z       + ipv6_cidr_block                      = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5579796Z       + ipv6_cidr_block_network_border_group = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5580160Z       + main_route_table_id                  = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5580550Z       + owner_id                             = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5580823Z       + tags                                 = {
+prod	Plan and apply	2026-11-27T23:32:09.5581152Z           + "Lab"     = "lab5"
+prod	Plan and apply	2026-11-27T23:32:09.5581397Z           + "Managed" = "terraform"
+prod	Plan and apply	2026-11-27T23:32:09.5581693Z           + "Name"    = "acs730-a1-prod-rschavda1-vpc"
+prod	Plan and apply	2026-11-27T23:32:09.5581989Z         }
+prod	Plan and apply	2026-11-27T23:32:09.5582213Z       + tags_all                             = {
+prod	Plan and apply	2026-11-27T23:32:09.5582498Z           + "Lab"     = "lab5"
+prod	Plan and apply	2026-11-27T23:32:09.5582750Z           + "Managed" = "terraform"
+prod	Plan and apply	2026-11-27T23:32:09.5583050Z           + "Name"    = "acs730-a1-prod-rschavda1-vpc"
+prod	Plan and apply	2026-11-27T23:32:09.5583311Z         }
+prod	Plan and apply	2026-11-27T23:32:09.5583572Z     }
+prod	Plan and apply	2026-11-27T23:32:09.5583665Z
+prod	Plan and apply	2026-11-27T23:32:09.5583792Z Plan: 9 to add, 0 to change, 0 to destroy.
+prod	Plan and apply	2026-11-27T23:32:09.5583974Z
+prod	Plan and apply	2026-11-27T23:32:09.5584045Z Changes to Outputs:
+prod	Plan and apply	2026-11-27T23:32:09.5584331Z   + web_url = (known after apply)
+prod	Plan and apply	2026-11-27T23:32:09.5584470Z
+prod	Plan and apply	2026-11-27T23:32:09.5584951Z ─────────────────────────────────────────────────────────────────────────────
+prod	Plan and apply	2026-11-27T23:32:09.5585185Z
+prod	Plan and apply	2026-11-27T23:32:09.5585308Z Saved the plan to: tfplan
+prod	Plan and apply	2026-11-27T23:32:09.5585464Z
+prod	Plan and apply	2026-11-27T23:32:09.5585648Z To perform exactly these actions, run the following command to apply:
+prod	Plan and apply	2026-11-27T23:32:09.5585986Z     terraform apply "tfplan"
+prod	Plan and apply	2026-11-27T23:32:11.8552859Z module.web.aws_vpc.main: Creating...
+prod	Plan and apply	2026-11-27T23:32:21.8563818Z module.web.aws_vpc.main: Still creating... [10s elapsed]
+prod	Plan and apply	2026-11-27T23:32:24.1228340Z module.web.aws_vpc.main: Creation complete after 12s [id=vpc-07b807aa26484770a]
+prod	Plan and apply	2026-11-27T23:32:24.1268578Z module.web.aws_internet_gateway.main: Creating...
+prod	Plan and apply	2026-11-27T23:32:24.1276572Z module.web.aws_subnet.public["b"]: Creating...
+prod	Plan and apply	2026-11-27T23:32:24.1277277Z module.web.aws_subnet.public["a"]: Creating...
+prod	Plan and apply	2026-11-27T23:32:24.1284844Z module.web.aws_security_group.web: Creating...
+prod	Plan and apply	2026-11-27T23:32:24.6496429Z module.web.aws_internet_gateway.main: Creation complete after 1s [id=igw-0dcead802c27d7082]
+prod	Plan and apply	2026-11-27T23:32:24.6529744Z module.web.aws_route_table.public: Creating...
+prod	Plan and apply	2026-11-27T23:32:26.1232772Z module.web.aws_route_table.public: Creation complete after 1s [id=rtb-057cbeb93f18aed4c]
+prod	Plan and apply	2026-11-27T23:32:26.8103878Z module.web.aws_security_group.web: Creation complete after 3s [id=sg-08ff212ee68fc4b3b]
+prod	Plan and apply	2026-11-27T23:32:34.1280435Z module.web.aws_subnet.public["a"]: Still creating... [10s elapsed]
+prod	Plan and apply	2026-11-27T23:32:34.1281062Z module.web.aws_subnet.public["b"]: Still creating... [10s elapsed]
+prod	Plan and apply	2026-11-27T23:32:35.3311018Z module.web.aws_subnet.public["b"]: Creation complete after 11s [id=subnet-0ffcc7d96472f2ff8]
+prod	Plan and apply	2026-11-27T23:32:35.3322548Z module.web.aws_subnet.public["a"]: Creation complete after 11s [id=subnet-0c159e71b3b1b3a08]
+prod	Plan and apply	2026-11-27T23:32:35.3342559Z module.web.aws_route_table_association.public["b"]: Creating...
+prod	Plan and apply	2026-11-27T23:32:35.3343223Z module.web.aws_route_table_association.public["a"]: Creating...
+prod	Plan and apply	2026-11-27T23:32:35.7632420Z module.web.aws_route_table_association.public["a"]: Creation complete after 1s [id=rtbassoc-0647bfc8a0137ebb9]
+prod	Plan and apply	2026-11-27T23:32:35.8153958Z module.web.aws_route_table_association.public["b"]: Creation complete after 1s [id=rtbassoc-09eabd1bd30594bd7]
+prod	Plan and apply	2026-11-27T23:32:35.8212779Z module.web.aws_instance.web: Creating...
+prod	Plan and apply	2026-11-27T23:32:45.8239707Z module.web.aws_instance.web: Still creating... [10s elapsed]
+prod	Plan and apply	2026-11-27T23:32:48.7335984Z module.web.aws_instance.web: Creation complete after 13s [id=i-09596066bf633e157]
+prod	Plan and apply	2026-11-27T23:32:49.2308245Z
+prod	Plan and apply	2026-11-27T23:32:49.2309547Z Apply complete! Resources: 9 added, 0 changed, 0 destroyed.
+prod	Plan and apply	2026-11-27T23:32:49.2309890Z
+prod	Plan and apply	2026-11-27T23:32:49.2310336Z Outputs:
+prod	Plan and apply	2026-11-27T23:32:49.2310556Z
+prod	Plan and apply	2026-11-27T23:32:49.2310732Z web_url = "http://54.210.245.11/"
+prod	Post Run aws-actions/configure-aws-credentials@v4	﻿2026-11-27T23:32:49.2483026Z Post job cleanup.
+prod	Post Run actions/checkout@v4	﻿2026-11-27T23:32:49.3390831Z Post job cleanup.
+prod	Post Run actions/checkout@v4	2026-11-27T23:32:49.4104012Z [command]/usr/bin/git version
+prod	Post Run actions/checkout@v4	2026-11-27T23:32:49.4140195Z git version 2.56.1
+prod	Post Run actions/checkout@v4	2026-11-27T23:32:49.4167702Z Temporarily overriding HOME='/home/runner/work/_temp/888781c2-ed57-41f4-93ab-a9c085afdfc9' before making global git config changes
+prod	Post Run actions/checkout@v4	2026-11-27T23:32:49.4168867Z Adding repository directory to the temporary git global config as a safe directory
+prod	Post Run actions/checkout@v4	2026-11-27T23:32:49.4172721Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/acs730-coursework/acs730-coursework
+prod	Post Run actions/checkout@v4	2026-11-27T23:32:49.4202076Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+prod	Post Run actions/checkout@v4	2026-11-27T23:32:49.4228123Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+prod	Post Run actions/checkout@v4	2026-11-27T23:32:49.4471758Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+prod	Post Run actions/checkout@v4	2026-11-27T23:32:49.4496562Z http.https://github.com/.extraheader
+prod	Post Run actions/checkout@v4	2026-11-27T23:32:49.4509389Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+prod	Post Run actions/checkout@v4	2026-11-27T23:32:49.4545484Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+prod	Post Run actions/checkout@v4	2026-11-27T23:32:49.4835423Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+prod	Post Run actions/checkout@v4	2026-11-27T23:32:49.4866586Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+prod	Complete job	﻿2026-11-27T23:32:49.5194227Z Cleaning up orphan processes
+prod	Complete job	2026-11-27T23:32:49.5438485Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, aws-actions/configure-aws-credentials@v4, hashicorp/setup-terraform@v3. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
