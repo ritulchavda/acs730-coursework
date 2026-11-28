@@ -1,0 +1,516 @@
+staging	Set up job	﻿2026-11-27T23:27:39.7625836Z Current runner version: '2.338.2'
+staging	Set up job	2026-11-27T23:27:39.7641686Z ##[group]Runner Image Provisioner
+staging	Set up job	2026-11-27T23:27:39.7642294Z Hosted Compute Agent
+staging	Set up job	2026-11-27T23:27:39.7642677Z Version: 20261111.635
+staging	Set up job	2026-11-27T23:27:39.7643108Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+staging	Set up job	2026-11-27T23:27:39.7643544Z Build Date: 2026-11-11T01:49:01Z
+staging	Set up job	2026-11-27T23:27:39.7643946Z Worker ID: {4d55f53a-efe0-4e8c-8be5-91a93a901d2b}
+staging	Set up job	2026-11-27T23:27:39.7644421Z Region: southcentralus
+staging	Set up job	2026-11-27T23:27:39.7644803Z Cloud: Azure
+staging	Set up job	2026-11-27T23:27:39.7645428Z ##[endgroup]
+staging	Set up job	2026-11-27T23:27:39.7646376Z ##[group]Operating System
+staging	Set up job	2026-11-27T23:27:39.7646734Z Ubuntu
+staging	Set up job	2026-11-27T23:27:39.7647131Z 26.04.1
+staging	Set up job	2026-11-27T23:27:39.7647468Z LTS
+staging	Set up job	2026-11-27T23:27:39.7647807Z ##[endgroup]
+staging	Set up job	2026-11-27T23:27:39.7648151Z ##[group]Runner Image
+staging	Set up job	2026-11-27T23:27:39.7648561Z Image: ubuntu-26.04
+staging	Set up job	2026-11-27T23:27:39.7648941Z Version: 20261122.9.1
+staging	Set up job	2026-11-27T23:27:39.7649760Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261122.9/images/ubuntu/Ubuntu2604-Readme.md
+staging	Set up job	2026-11-27T23:27:39.7650785Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261122.9
+staging	Set up job	2026-11-27T23:27:39.7651411Z ##[endgroup]
+staging	Set up job	2026-11-27T23:27:39.7652042Z ##[group]GITHUB_TOKEN Permissions
+staging	Set up job	2026-11-27T23:27:39.7653399Z Contents: read
+staging	Set up job	2026-11-27T23:27:39.7653742Z Metadata: read
+staging	Set up job	2026-11-27T23:27:39.7654130Z ##[endgroup]
+staging	Set up job	2026-11-27T23:27:39.7655394Z Secret source: Actions
+staging	Set up job	2026-11-27T23:27:39.7655979Z Cache mode: write
+staging	Set up job	2026-11-27T23:27:39.7656509Z Prepare workflow directory
+staging	Set up job	2026-11-27T23:27:39.7979526Z Prepare all required actions
+staging	Set up job	2026-11-27T23:27:39.8010293Z Getting action download info
+staging	Set up job	2026-11-27T23:27:40.0632030Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+staging	Set up job	2026-11-27T23:27:40.1353403Z Download action repository 'aws-actions/configure-aws-credentials@v4' (SHA:7474bc4690e29a8392af63c5b98e7449536d5c3a)
+staging	Set up job	2026-11-27T23:27:40.5524275Z Download action repository 'hashicorp/setup-terraform@v3' (SHA:b9cd54a3c349d3f38e8881555d616ced269862dd)
+staging	Set up job	2026-11-27T23:27:41.0079128Z Complete job name: staging
+staging	Run actions/checkout@v4	﻿2026-11-27T23:27:41.0553150Z ##[group]Run actions/checkout@v4
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.0553631Z with:
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.0553921Z   repository: ritulchavda/acs730-coursework
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.0556107Z   token: ***
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.0556373Z   ssh-strict: true
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.0556651Z   ssh-user: git
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.0556931Z   persist-credentials: true
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.0557235Z   clean: true
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.0557521Z   sparse-checkout-cone-mode: true
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.0557843Z   fetch-depth: 1
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.0558113Z   fetch-tags: false
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.0558394Z   show-progress: true
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.0558669Z   lfs: false
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.0558924Z   submodules: false
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.0559220Z   set-safe-directory: true
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.0559653Z   allow-unsafe-pr-checkout: false
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.0560040Z env:
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.0560294Z   TF_VAR_owner: rschavda1
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.0560604Z ##[endgroup]
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.2370113Z Syncing repository: ritulchavda/acs730-coursework
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.2372255Z ##[group]Getting Git version info
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.2373054Z Working directory is '/home/runner/work/acs730-coursework/acs730-coursework'
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.2374229Z [command]/usr/bin/git version
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.2374752Z git version 2.56.1
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.2385669Z ##[endgroup]
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.2396638Z Temporarily overriding HOME='/home/runner/work/_temp/91be4060-c29a-4c2b-be7a-43a11a45db39' before making global git config changes
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.2398088Z Adding repository directory to the temporary git global config as a safe directory
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.2399792Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/acs730-coursework/acs730-coursework
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.2450119Z Deleting the contents of '/home/runner/work/acs730-coursework/acs730-coursework'
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.2452593Z ##[group]Initializing the repository
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.2455461Z [command]/usr/bin/git init /home/runner/work/acs730-coursework/acs730-coursework
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.2530373Z hint: Using 'master' as the name for the initial branch. This default branch name
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.2531438Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.2532001Z hint: to use in all of your new repositories, which will suppress this warning,
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.2532427Z hint: call:
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.2532673Z hint:
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.2532995Z hint: 	git config --global init.defaultBranch <name>
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.2533359Z hint:
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.2533697Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.2534240Z hint: 'development'. The just-created branch can be renamed via this command:
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.2534667Z hint:
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.2534925Z hint: 	git branch -m <name>
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.2535220Z hint:
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.2535609Z hint: Disable this message with "git config set advice.defaultBranchName false"
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.2545637Z Initialized empty Git repository in /home/runner/work/acs730-coursework/acs730-coursework/.git/
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.2553367Z [command]/usr/bin/git remote add origin https://github.com/ritulchavda/acs730-coursework
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.2609994Z ##[endgroup]
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.2610728Z ##[group]Disabling automatic garbage collection
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.2611343Z [command]/usr/bin/git config --local gc.auto 0
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.2663794Z ##[endgroup]
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.2664534Z ##[group]Setting up auth
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.2665262Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.2692061Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.3038675Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.3066493Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.3275418Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.3301253Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.3508680Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.3541879Z ##[endgroup]
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.3542592Z ##[group]Fetching the repository
+staging	Run actions/checkout@v4	2026-11-27T23:27:41.3550196Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +db2fbf86d75d007465eacf401135b7cb3569ee04:refs/remotes/origin/main
+staging	Run actions/checkout@v4	2026-11-27T23:27:42.0177650Z From https://github.com/ritulchavda/acs730-coursework
+staging	Run actions/checkout@v4	2026-11-27T23:27:42.0179006Z  * [new ref]         db2fbf86d75d007465eacf401135b7cb3569ee04 -> origin/main
+staging	Run actions/checkout@v4	2026-11-27T23:27:42.0181852Z ##[endgroup]
+staging	Run actions/checkout@v4	2026-11-27T23:27:42.0182848Z ##[group]Determining the checkout info
+staging	Run actions/checkout@v4	2026-11-27T23:27:42.0183939Z ##[endgroup]
+staging	Run actions/checkout@v4	2026-11-27T23:27:42.0188367Z [command]/usr/bin/git sparse-checkout disable
+staging	Run actions/checkout@v4	2026-11-27T23:27:42.0229958Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+staging	Run actions/checkout@v4	2026-11-27T23:27:42.0254405Z ##[group]Checking out the ref
+staging	Run actions/checkout@v4	2026-11-27T23:27:42.0261701Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+staging	Run actions/checkout@v4	2026-11-27T23:27:42.0448471Z Switched to a new branch 'main'
+staging	Run actions/checkout@v4	2026-11-27T23:27:42.0452727Z branch 'main' set up to track 'origin/main'.
+staging	Run actions/checkout@v4	2026-11-27T23:27:42.0488427Z ##[endgroup]
+staging	Run actions/checkout@v4	2026-11-27T23:27:42.0490746Z [command]/usr/bin/git log -1 --format=%H
+staging	Run actions/checkout@v4	2026-11-27T23:27:42.0510136Z db2fbf86d75d007465eacf401135b7cb3569ee04
+staging	Run aws-actions/configure-aws-credentials@v4	﻿2026-11-27T23:27:42.0842990Z ##[group]Run aws-actions/configure-aws-credentials@v4
+staging	Run aws-actions/configure-aws-credentials@v4	2026-11-27T23:27:42.0843960Z with:
+staging	Run aws-actions/configure-aws-credentials@v4	2026-11-27T23:27:42.0844707Z   aws-access-key-id: ***
+staging	Run aws-actions/configure-aws-credentials@v4	2026-11-27T23:27:42.0845532Z   aws-secret-access-key: ***
+staging	Run aws-actions/configure-aws-credentials@v4	2026-11-27T23:27:42.0854419Z   aws-session-token: ***
+staging	Run aws-actions/configure-aws-credentials@v4	2026-11-27T23:27:42.0855037Z   aws-region: us-east-1
+staging	Run aws-actions/configure-aws-credentials@v4	2026-11-27T23:27:42.0855647Z   audience: sts.amazonaws.com
+staging	Run aws-actions/configure-aws-credentials@v4	2026-11-27T23:27:42.0856321Z   output-env-credentials: true
+staging	Run aws-actions/configure-aws-credentials@v4	2026-11-27T23:27:42.0856948Z env:
+staging	Run aws-actions/configure-aws-credentials@v4	2026-11-27T23:27:42.0857460Z   TF_VAR_owner: rschavda1
+staging	Run aws-actions/configure-aws-credentials@v4	2026-11-27T23:27:42.0858045Z ##[endgroup]
+staging	Run aws-actions/configure-aws-credentials@v4	2026-11-27T23:27:42.3481072Z Proceeding with IAM user credentials
+staging	Run hashicorp/setup-terraform@v3	﻿2026-11-27T23:27:42.3638617Z ##[group]Run hashicorp/setup-terraform@v3
+staging	Run hashicorp/setup-terraform@v3	2026-11-27T23:27:42.3639491Z with:
+staging	Run hashicorp/setup-terraform@v3	2026-11-27T23:27:42.3639990Z   terraform_version: 1.10.3
+staging	Run hashicorp/setup-terraform@v3	2026-11-27T23:27:42.3640602Z   terraform_wrapper: false
+staging	Run hashicorp/setup-terraform@v3	2026-11-27T23:27:42.3641292Z   cli_config_credentials_hostname: app.terraform.io
+staging	Run hashicorp/setup-terraform@v3	2026-11-27T23:27:42.3642025Z env:
+staging	Run hashicorp/setup-terraform@v3	2026-11-27T23:27:42.3642510Z   TF_VAR_owner: rschavda1
+staging	Run hashicorp/setup-terraform@v3	2026-11-27T23:27:42.3643126Z   AWS_DEFAULT_REGION: us-east-1
+staging	Run hashicorp/setup-terraform@v3	2026-11-27T23:27:42.3643769Z   AWS_REGION: us-east-1
+staging	Run hashicorp/setup-terraform@v3	2026-11-27T23:27:42.3644482Z   AWS_ACCESS_KEY_ID: ***
+staging	Run hashicorp/setup-terraform@v3	2026-11-27T23:27:42.3645252Z   AWS_SECRET_ACCESS_KEY: ***
+staging	Run hashicorp/setup-terraform@v3	2026-11-27T23:27:42.3653060Z   AWS_SESSION_TOKEN: ***
+staging	Run hashicorp/setup-terraform@v3	2026-11-27T23:27:42.3653631Z ##[endgroup]
+staging	Run hashicorp/setup-terraform@v3	2026-11-27T23:27:42.4512525Z (node:2202) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+staging	Run hashicorp/setup-terraform@v3	2026-11-27T23:27:42.4515055Z (Use `node --trace-deprecation ...` to show where the warning was created)
+staging	Run hashicorp/setup-terraform@v3	2026-11-27T23:27:42.8600247Z [command]/usr/bin/unzip -o -q /home/runner/work/_temp/987dac28-feb1-4942-a27d-37bd5cbc1342
+staging	Plan and apply	﻿2026-11-27T23:27:43.3091835Z ##[group]Run : "${TF_VAR_owner:?Set the ASSIGNMENT1_TF_OWNER repository variable}"
+staging	Plan and apply	2026-11-27T23:27:43.3092231Z ^[[36;1m: "${TF_VAR_owner:?Set the ASSIGNMENT1_TF_OWNER repository variable}"^[[0m
+staging	Plan and apply	2026-11-27T23:27:43.3092486Z ^[[36;1mterraform init -input=false -no-color^[[0m
+staging	Plan and apply	2026-11-27T23:27:43.3092755Z ^[[36;1mterraform plan -input=false -no-color -lock-timeout=2m -out=tfplan^[[0m
+staging	Plan and apply	2026-11-27T23:27:43.3093044Z ^[[36;1mterraform apply -input=false -no-color -lock-timeout=2m tfplan^[[0m
+staging	Plan and apply	2026-11-27T23:27:43.3125048Z shell: /usr/bin/bash -e {0}
+staging	Plan and apply	2026-11-27T23:27:43.3125225Z env:
+staging	Plan and apply	2026-11-27T23:27:43.3125352Z   TF_VAR_owner: rschavda1
+staging	Plan and apply	2026-11-27T23:27:43.3125504Z   AWS_DEFAULT_REGION: us-east-1
+staging	Plan and apply	2026-11-27T23:27:43.3125656Z   AWS_REGION: us-east-1
+staging	Plan and apply	2026-11-27T23:27:43.3125915Z   AWS_ACCESS_KEY_ID: ***
+staging	Plan and apply	2026-11-27T23:27:43.3126116Z   AWS_SECRET_ACCESS_KEY: ***
+staging	Plan and apply	2026-11-27T23:27:43.3128067Z   AWS_SESSION_TOKEN: ***
+staging	Plan and apply	2026-11-27T23:27:43.3128204Z ##[endgroup]
+staging	Plan and apply	2026-11-27T23:27:43.3539967Z Initializing the backend...
+staging	Plan and apply	2026-11-27T23:27:43.7117238Z
+staging	Plan and apply	2026-11-27T23:27:43.7117620Z Successfully configured the backend "s3"! Terraform will automatically
+staging	Plan and apply	2026-11-27T23:27:43.7118180Z use this backend unless the backend configuration changes.
+staging	Plan and apply	2026-11-27T23:27:43.8155666Z Initializing modules...
+staging	Plan and apply	2026-11-27T23:27:43.8168188Z - web in ../modules/web
+staging	Plan and apply	2026-11-27T23:27:43.8174860Z Initializing provider plugins...
+staging	Plan and apply	2026-11-27T23:27:43.8175374Z - Reusing previous version of hashicorp/aws from the dependency lock file
+staging	Plan and apply	2026-11-27T23:27:44.1413818Z - Installing hashicorp/aws v5.100.0...
+staging	Plan and apply	2026-11-27T23:27:49.2900495Z - Installed hashicorp/aws v5.100.0 (signed by HashiCorp)
+staging	Plan and apply	2026-11-27T23:27:49.2900933Z
+staging	Plan and apply	2026-11-27T23:27:49.2901213Z Terraform has been successfully initialized!
+staging	Plan and apply	2026-11-27T23:27:49.2901397Z
+staging	Plan and apply	2026-11-27T23:27:49.2901572Z You may now begin working with Terraform. Try running "terraform plan" to see
+staging	Plan and apply	2026-11-27T23:27:49.2902060Z any changes that are required for your infrastructure. All Terraform commands
+staging	Plan and apply	2026-11-27T23:27:49.2902402Z should now work.
+staging	Plan and apply	2026-11-27T23:27:49.2902550Z
+staging	Plan and apply	2026-11-27T23:27:49.2902717Z If you ever set or change modules or backend configuration for Terraform,
+staging	Plan and apply	2026-11-27T23:27:49.2903141Z rerun this command to reinitialize your working directory. If you forget, other
+staging	Plan and apply	2026-11-27T23:27:49.2904118Z commands will detect it and remind you to do so if necessary.
+staging	Plan and apply	2026-11-27T23:27:51.4873626Z module.web.data.aws_region.current: Reading...
+staging	Plan and apply	2026-11-27T23:27:51.4874115Z module.web.data.aws_ami.al2023[0]: Reading...
+staging	Plan and apply	2026-11-27T23:27:51.4874460Z module.web.data.aws_availability_zones.available: Reading...
+staging	Plan and apply	2026-11-27T23:27:51.4894563Z module.web.data.aws_region.current: Read complete after 0s [id=us-east-1]
+staging	Plan and apply	2026-11-27T23:27:51.7395785Z module.web.data.aws_availability_zones.available: Read complete after 1s [id=us-east-1]
+staging	Plan and apply	2026-11-27T23:27:52.1167043Z module.web.data.aws_ami.al2023[0]: Read complete after 1s [id=ami-02771ddfb8e749b97]
+staging	Plan and apply	2026-11-27T23:27:52.2137104Z
+staging	Plan and apply	2026-11-27T23:27:52.2137814Z Terraform used the selected providers to generate the following execution
+staging	Plan and apply	2026-11-27T23:27:52.2138365Z plan. Resource actions are indicated with the following symbols:
+staging	Plan and apply	2026-11-27T23:27:52.2138675Z   + create
+staging	Plan and apply	2026-11-27T23:27:52.2138784Z
+staging	Plan and apply	2026-11-27T23:27:52.2138898Z Terraform will perform the following actions:
+staging	Plan and apply	2026-11-27T23:27:52.2139345Z
+staging	Plan and apply	2026-11-27T23:27:52.2139637Z   # module.web.aws_instance.web will be created
+staging	Plan and apply	2026-11-27T23:27:52.2139921Z   + resource "aws_instance" "web" {
+staging	Plan and apply	2026-11-27T23:27:52.2140208Z       + ami                                  = "ami-02771ddfb8e749b97"
+staging	Plan and apply	2026-11-27T23:27:52.2140537Z       + arn                                  = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2140877Z       + associate_public_ip_address          = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2141244Z       + availability_zone                    = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2141599Z       + cpu_core_count                       = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2141949Z       + cpu_threads_per_core                 = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2142821Z       + disable_api_stop                     = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2143148Z       + disable_api_termination              = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2143458Z       + ebs_optimized                        = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2143807Z       + enable_primary_ipv6                  = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2144101Z       + get_password_data                    = false
+staging	Plan and apply	2026-11-27T23:27:52.2144384Z       + host_id                              = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2144691Z       + host_resource_group_arn              = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2145032Z       + iam_instance_profile                 = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2145397Z       + id                                   = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2145724Z       + instance_initiated_shutdown_behavior = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2146054Z       + instance_lifecycle                   = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2146370Z       + instance_state                       = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2146685Z       + instance_type                        = "t3.micro"
+staging	Plan and apply	2026-11-27T23:27:52.2146982Z       + ipv6_address_count                   = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2147320Z       + ipv6_addresses                       = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2147626Z       + key_name                             = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2147924Z       + monitoring                           = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2148240Z       + outpost_arn                          = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2148584Z       + password_data                        = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2148892Z       + placement_group                      = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2151831Z       + placement_partition_number           = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2152570Z       + primary_network_interface_id         = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2153179Z       + private_dns                          = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2153514Z       + private_ip                           = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2153830Z       + public_dns                           = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2154381Z       + public_ip                            = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2154708Z       + secondary_private_ips                = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2155031Z       + security_groups                      = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2155327Z       + source_dest_check                    = true
+staging	Plan and apply	2026-11-27T23:27:52.2155628Z       + spot_instance_request_id             = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2155941Z       + subnet_id                            = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2156214Z       + tags                                 = {
+staging	Plan and apply	2026-11-27T23:27:52.2156456Z           + "Lab"     = "lab5"
+staging	Plan and apply	2026-11-27T23:27:52.2156676Z           + "Managed" = "terraform"
+staging	Plan and apply	2026-11-27T23:27:52.2156936Z           + "Name"    = "acs730-a1-staging-rschavda1-web"
+staging	Plan and apply	2026-11-27T23:27:52.2157199Z         }
+staging	Plan and apply	2026-11-27T23:27:52.2157385Z       + tags_all                             = {
+staging	Plan and apply	2026-11-27T23:27:52.2157626Z           + "Lab"     = "lab5"
+staging	Plan and apply	2026-11-27T23:27:52.2157847Z           + "Managed" = "terraform"
+staging	Plan and apply	2026-11-27T23:27:52.2158097Z           + "Name"    = "acs730-a1-staging-rschavda1-web"
+staging	Plan and apply	2026-11-27T23:27:52.2158343Z         }
+staging	Plan and apply	2026-11-27T23:27:52.2158560Z       + tenancy                              = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2158892Z       + user_data                            = "96ac48702c5f3ebe9d736aac795f3b85de83787a"
+staging	Plan and apply	2026-11-27T23:27:52.2159394Z       + user_data_base64                     = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2159701Z       + user_data_replace_on_change          = true
+staging	Plan and apply	2026-11-27T23:27:52.2159995Z       + vpc_security_group_ids               = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2160199Z
+staging	Plan and apply	2026-11-27T23:27:52.2160485Z       + capacity_reservation_specification (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2160692Z
+staging	Plan and apply	2026-11-27T23:27:52.2160786Z       + cpu_options (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2160930Z
+staging	Plan and apply	2026-11-27T23:27:52.2160996Z       + ebs_block_device (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2161105Z
+staging	Plan and apply	2026-11-27T23:27:52.2161166Z       + enclave_options (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2161272Z
+staging	Plan and apply	2026-11-27T23:27:52.2161343Z       + ephemeral_block_device (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2161453Z
+staging	Plan and apply	2026-11-27T23:27:52.2161523Z       + instance_market_options (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2161637Z
+staging	Plan and apply	2026-11-27T23:27:52.2161701Z       + maintenance_options (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2161813Z
+staging	Plan and apply	2026-11-27T23:27:52.2161877Z       + metadata_options (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2161982Z
+staging	Plan and apply	2026-11-27T23:27:52.2162043Z       + network_interface (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2162150Z
+staging	Plan and apply	2026-11-27T23:27:52.2162229Z       + private_dns_name_options (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2162344Z
+staging	Plan and apply	2026-11-27T23:27:52.2162410Z       + root_block_device (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2162557Z     }
+staging	Plan and apply	2026-11-27T23:27:52.2162699Z
+staging	Plan and apply	2026-11-27T23:27:52.2162786Z   # module.web.aws_internet_gateway.main will be created
+staging	Plan and apply	2026-11-27T23:27:52.2162971Z   + resource "aws_internet_gateway" "main" {
+staging	Plan and apply	2026-11-27T23:27:52.2163134Z       + arn      = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2163287Z       + id       = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2163439Z       + owner_id = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2163584Z       + tags     = {
+staging	Plan and apply	2026-11-27T23:27:52.2163709Z           + "Lab"     = "lab5"
+staging	Plan and apply	2026-11-27T23:27:52.2163848Z           + "Managed" = "terraform"
+staging	Plan and apply	2026-11-27T23:27:52.2164018Z           + "Name"    = "acs730-a1-staging-rschavda1-igw"
+staging	Plan and apply	2026-11-27T23:27:52.2164177Z         }
+staging	Plan and apply	2026-11-27T23:27:52.2164285Z       + tags_all = {
+staging	Plan and apply	2026-11-27T23:27:52.2164410Z           + "Lab"     = "lab5"
+staging	Plan and apply	2026-11-27T23:27:52.2164544Z           + "Managed" = "terraform"
+staging	Plan and apply	2026-11-27T23:27:52.2164707Z           + "Name"    = "acs730-a1-staging-rschavda1-igw"
+staging	Plan and apply	2026-11-27T23:27:52.2164870Z         }
+staging	Plan and apply	2026-11-27T23:27:52.2164987Z       + vpc_id   = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2165131Z     }
+staging	Plan and apply	2026-11-27T23:27:52.2165285Z
+staging	Plan and apply	2026-11-27T23:27:52.2165364Z   # module.web.aws_route_table.public will be created
+staging	Plan and apply	2026-11-27T23:27:52.2165543Z   + resource "aws_route_table" "public" {
+staging	Plan and apply	2026-11-27T23:27:52.2165706Z       + arn              = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2165865Z       + id               = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2166030Z       + owner_id         = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2166193Z       + propagating_vgws = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2166351Z       + route            = [
+staging	Plan and apply	2026-11-27T23:27:52.2166483Z           + {
+staging	Plan and apply	2026-11-27T23:27:52.2166618Z               + cidr_block                 = "0.0.0.0/0"
+staging	Plan and apply	2026-11-27T23:27:52.2166814Z               + gateway_id                 = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2166999Z                 # (11 unchanged attributes hidden)
+staging	Plan and apply	2026-11-27T23:27:52.2167151Z             },
+staging	Plan and apply	2026-11-27T23:27:52.2167269Z         ]
+staging	Plan and apply	2026-11-27T23:27:52.2167379Z       + tags             = {
+staging	Plan and apply	2026-11-27T23:27:52.2167513Z           + "Lab"     = "lab5"
+staging	Plan and apply	2026-11-27T23:27:52.2167654Z           + "Managed" = "terraform"
+staging	Plan and apply	2026-11-27T23:27:52.2167832Z           + "Name"    = "acs730-a1-staging-rschavda1-public-rt"
+staging	Plan and apply	2026-11-27T23:27:52.2168005Z         }
+staging	Plan and apply	2026-11-27T23:27:52.2168113Z       + tags_all         = {
+staging	Plan and apply	2026-11-27T23:27:52.2168247Z           + "Lab"     = "lab5"
+staging	Plan and apply	2026-11-27T23:27:52.2168381Z           + "Managed" = "terraform"
+staging	Plan and apply	2026-11-27T23:27:52.2168577Z           + "Name"    = "acs730-a1-staging-rschavda1-public-rt"
+staging	Plan and apply	2026-11-27T23:27:52.2168750Z         }
+staging	Plan and apply	2026-11-27T23:27:52.2168867Z       + vpc_id           = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2169014Z     }
+staging	Plan and apply	2026-11-27T23:27:52.2169078Z
+staging	Plan and apply	2026-11-27T23:27:52.2169179Z   # module.web.aws_route_table_association.public["a"] will be created
+staging	Plan and apply	2026-11-27T23:27:52.2169626Z   + resource "aws_route_table_association" "public" {
+staging	Plan and apply	2026-11-27T23:27:52.2169802Z       + id             = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2169964Z       + route_table_id = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2170123Z       + subnet_id      = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2170271Z     }
+staging	Plan and apply	2026-11-27T23:27:52.2170335Z
+staging	Plan and apply	2026-11-27T23:27:52.2170435Z   # module.web.aws_route_table_association.public["b"] will be created
+staging	Plan and apply	2026-11-27T23:27:52.2170649Z   + resource "aws_route_table_association" "public" {
+staging	Plan and apply	2026-11-27T23:27:52.2170821Z       + id             = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2170981Z       + route_table_id = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2171137Z       + subnet_id      = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2171278Z     }
+staging	Plan and apply	2026-11-27T23:27:52.2171340Z
+staging	Plan and apply	2026-11-27T23:27:52.2171418Z   # module.web.aws_security_group.web will be created
+staging	Plan and apply	2026-11-27T23:27:52.2171617Z   + resource "aws_security_group" "web" {
+staging	Plan and apply	2026-11-27T23:27:52.2171783Z       + arn                    = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2171978Z       + description            = "Web ingress for ACS730 lab 5"
+staging	Plan and apply	2026-11-27T23:27:52.2172157Z       + egress                 = [
+staging	Plan and apply	2026-11-27T23:27:52.2172298Z           + {
+staging	Plan and apply	2026-11-27T23:27:52.2172420Z               + cidr_blocks      = [
+staging	Plan and apply	2026-11-27T23:27:52.2172573Z                   + "0.0.0.0/0",
+staging	Plan and apply	2026-11-27T23:27:52.2172706Z                 ]
+staging	Plan and apply	2026-11-27T23:27:52.2172912Z               + description      = "All outbound traffic for boot-time package installation"
+staging	Plan and apply	2026-11-27T23:27:52.2173139Z               + from_port        = 0
+staging	Plan and apply	2026-11-27T23:27:52.2173288Z               + ipv6_cidr_blocks = []
+staging	Plan and apply	2026-11-27T23:27:52.2173435Z               + prefix_list_ids  = []
+staging	Plan and apply	2026-11-27T23:27:52.2173593Z               + protocol         = "-1"
+staging	Plan and apply	2026-11-27T23:27:52.2173745Z               + security_groups  = []
+staging	Plan and apply	2026-11-27T23:27:52.2173894Z               + self             = false
+staging	Plan and apply	2026-11-27T23:27:52.2174049Z               + to_port          = 0
+staging	Plan and apply	2026-11-27T23:27:52.2174188Z             },
+staging	Plan and apply	2026-11-27T23:27:52.2174301Z         ]
+staging	Plan and apply	2026-11-27T23:27:52.2174433Z       + id                     = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2174595Z       + ingress                = [
+staging	Plan and apply	2026-11-27T23:27:52.2174730Z           + {
+staging	Plan and apply	2026-11-27T23:27:52.2174938Z               + cidr_blocks      = [
+staging	Plan and apply	2026-11-27T23:27:52.2175081Z                   + "0.0.0.0/0",
+staging	Plan and apply	2026-11-27T23:27:52.2175216Z                 ]
+staging	Plan and apply	2026-11-27T23:27:52.2175353Z               + description      = "HTTP from anywhere"
+staging	Plan and apply	2026-11-27T23:27:52.2175520Z               + from_port        = 80
+staging	Plan and apply	2026-11-27T23:27:52.2175665Z               + ipv6_cidr_blocks = []
+staging	Plan and apply	2026-11-27T23:27:52.2175809Z               + prefix_list_ids  = []
+staging	Plan and apply	2026-11-27T23:27:52.2175960Z               + protocol         = "tcp"
+staging	Plan and apply	2026-11-27T23:27:52.2176108Z               + security_groups  = []
+staging	Plan and apply	2026-11-27T23:27:52.2176251Z               + self             = false
+staging	Plan and apply	2026-11-27T23:27:52.2176401Z               + to_port          = 80
+staging	Plan and apply	2026-11-27T23:27:52.2176535Z             },
+staging	Plan and apply	2026-11-27T23:27:52.2176652Z         ]
+staging	Plan and apply	2026-11-27T23:27:52.2176798Z       + name                   = "acs730-a1-staging-rschavda1-web"
+staging	Plan and apply	2026-11-27T23:27:52.2176989Z       + name_prefix            = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2177167Z       + owner_id               = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2177337Z       + revoke_rules_on_delete = false
+staging	Plan and apply	2026-11-27T23:27:52.2177484Z       + tags                   = {
+staging	Plan and apply	2026-11-27T23:27:52.2177624Z           + "Lab"     = "lab5"
+staging	Plan and apply	2026-11-27T23:27:52.2177762Z           + "Managed" = "terraform"
+staging	Plan and apply	2026-11-27T23:27:52.2177936Z           + "Name"    = "acs730-a1-staging-rschavda1-web-sg"
+staging	Plan and apply	2026-11-27T23:27:52.2178101Z         }
+staging	Plan and apply	2026-11-27T23:27:52.2178216Z       + tags_all               = {
+staging	Plan and apply	2026-11-27T23:27:52.2178360Z           + "Lab"     = "lab5"
+staging	Plan and apply	2026-11-27T23:27:52.2178501Z           + "Managed" = "terraform"
+staging	Plan and apply	2026-11-27T23:27:52.2178666Z           + "Name"    = "acs730-a1-staging-rschavda1-web-sg"
+staging	Plan and apply	2026-11-27T23:27:52.2178834Z         }
+staging	Plan and apply	2026-11-27T23:27:52.2179040Z       + vpc_id                 = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2179197Z     }
+staging	Plan and apply	2026-11-27T23:27:52.2179385Z
+staging	Plan and apply	2026-11-27T23:27:52.2179467Z   # module.web.aws_subnet.public["a"] will be created
+staging	Plan and apply	2026-11-27T23:27:52.2179643Z   + resource "aws_subnet" "public" {
+staging	Plan and apply	2026-11-27T23:27:52.2179817Z       + arn                                            = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2180027Z       + assign_ipv6_address_on_creation                = false
+staging	Plan and apply	2026-11-27T23:27:52.2180239Z       + availability_zone                              = "us-east-1a"
+staging	Plan and apply	2026-11-27T23:27:52.2180466Z       + availability_zone_id                           = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2180693Z       + cidr_block                                     = "10.43.1.0/24"
+staging	Plan and apply	2026-11-27T23:27:52.2180892Z       + enable_dns64                                   = false
+staging	Plan and apply	2026-11-27T23:27:52.2181089Z       + enable_resource_name_dns_a_record_on_launch    = false
+staging	Plan and apply	2026-11-27T23:27:52.2181295Z       + enable_resource_name_dns_aaaa_record_on_launch = false
+staging	Plan and apply	2026-11-27T23:27:52.2181495Z       + id                                             = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2181711Z       + ipv6_cidr_block_association_id                 = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2181933Z       + ipv6_native                                    = false
+staging	Plan and apply	2026-11-27T23:27:52.2182126Z       + map_public_ip_on_launch                        = true
+staging	Plan and apply	2026-11-27T23:27:52.2182326Z       + owner_id                                       = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2182555Z       + private_dns_hostname_type_on_launch            = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2182766Z       + tags                                           = {
+staging	Plan and apply	2026-11-27T23:27:52.2182927Z           + "Lab"     = "lab5"
+staging	Plan and apply	2026-11-27T23:27:52.2183069Z           + "Managed" = "terraform"
+staging	Plan and apply	2026-11-27T23:27:52.2183239Z           + "Name"    = "acs730-a1-staging-rschavda1-public-a"
+staging	Plan and apply	2026-11-27T23:27:52.2183408Z         }
+staging	Plan and apply	2026-11-27T23:27:52.2183540Z       + tags_all                                       = {
+staging	Plan and apply	2026-11-27T23:27:52.2183701Z           + "Lab"     = "lab5"
+staging	Plan and apply	2026-11-27T23:27:52.2183837Z           + "Managed" = "terraform"
+staging	Plan and apply	2026-11-27T23:27:52.2184008Z           + "Name"    = "acs730-a1-staging-rschavda1-public-a"
+staging	Plan and apply	2026-11-27T23:27:52.2184295Z         }
+staging	Plan and apply	2026-11-27T23:27:52.2184433Z       + vpc_id                                         = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2184603Z     }
+staging	Plan and apply	2026-11-27T23:27:52.2184664Z
+staging	Plan and apply	2026-11-27T23:27:52.2184742Z   # module.web.aws_subnet.public["b"] will be created
+staging	Plan and apply	2026-11-27T23:27:52.2184917Z   + resource "aws_subnet" "public" {
+staging	Plan and apply	2026-11-27T23:27:52.2185088Z       + arn                                            = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2185292Z       + assign_ipv6_address_on_creation                = false
+staging	Plan and apply	2026-11-27T23:27:52.2185501Z       + availability_zone                              = "us-east-1b"
+staging	Plan and apply	2026-11-27T23:27:52.2185723Z       + availability_zone_id                           = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2185950Z       + cidr_block                                     = "10.43.2.0/24"
+staging	Plan and apply	2026-11-27T23:27:52.2186147Z       + enable_dns64                                   = false
+staging	Plan and apply	2026-11-27T23:27:52.2186342Z       + enable_resource_name_dns_a_record_on_launch    = false
+staging	Plan and apply	2026-11-27T23:27:52.2186555Z       + enable_resource_name_dns_aaaa_record_on_launch = false
+staging	Plan and apply	2026-11-27T23:27:52.2186749Z       + id                                             = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2186969Z       + ipv6_cidr_block_association_id                 = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2187182Z       + ipv6_native                                    = false
+staging	Plan and apply	2026-11-27T23:27:52.2187374Z       + map_public_ip_on_launch                        = true
+staging	Plan and apply	2026-11-27T23:27:52.2187577Z       + owner_id                                       = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2187803Z       + private_dns_hostname_type_on_launch            = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2188090Z       + tags                                           = {
+staging	Plan and apply	2026-11-27T23:27:52.2188254Z           + "Lab"     = "lab5"
+staging	Plan and apply	2026-11-27T23:27:52.2188390Z           + "Managed" = "terraform"
+staging	Plan and apply	2026-11-27T23:27:52.2188559Z           + "Name"    = "acs730-a1-staging-rschavda1-public-b"
+staging	Plan and apply	2026-11-27T23:27:52.2188727Z         }
+staging	Plan and apply	2026-11-27T23:27:52.2188859Z       + tags_all                                       = {
+staging	Plan and apply	2026-11-27T23:27:52.2189025Z           + "Lab"     = "lab5"
+staging	Plan and apply	2026-11-27T23:27:52.2189163Z           + "Managed" = "terraform"
+staging	Plan and apply	2026-11-27T23:27:52.2189443Z           + "Name"    = "acs730-a1-staging-rschavda1-public-b"
+staging	Plan and apply	2026-11-27T23:27:52.2189613Z         }
+staging	Plan and apply	2026-11-27T23:27:52.2189748Z       + vpc_id                                         = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2189918Z     }
+staging	Plan and apply	2026-11-27T23:27:52.2189980Z
+staging	Plan and apply	2026-11-27T23:27:52.2190045Z   # module.web.aws_vpc.main will be created
+staging	Plan and apply	2026-11-27T23:27:52.2190204Z   + resource "aws_vpc" "main" {
+staging	Plan and apply	2026-11-27T23:27:52.2190364Z       + arn                                  = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2190561Z       + cidr_block                           = "10.43.0.0/16"
+staging	Plan and apply	2026-11-27T23:27:52.2190760Z       + default_network_acl_id               = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2190973Z       + default_route_table_id               = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2191185Z       + default_security_group_id            = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2191392Z       + dhcp_options_id                      = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2191576Z       + enable_dns_hostnames                 = true
+staging	Plan and apply	2026-11-27T23:27:52.2191756Z       + enable_dns_support                   = true
+staging	Plan and apply	2026-11-27T23:27:52.2191947Z       + enable_network_address_usage_metrics = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2192143Z       + id                                   = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2192331Z       + instance_tenancy                     = "default"
+staging	Plan and apply	2026-11-27T23:27:52.2192523Z       + ipv6_association_id                  = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2192728Z       + ipv6_cidr_block                      = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2192938Z       + ipv6_cidr_block_network_border_group = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2193143Z       + main_route_table_id                  = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2193428Z       + owner_id                             = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2193610Z       + tags                                 = {
+staging	Plan and apply	2026-11-27T23:27:52.2193768Z           + "Lab"     = "lab5"
+staging	Plan and apply	2026-11-27T23:27:52.2193904Z           + "Managed" = "terraform"
+staging	Plan and apply	2026-11-27T23:27:52.2194071Z           + "Name"    = "acs730-a1-staging-rschavda1-vpc"
+staging	Plan and apply	2026-11-27T23:27:52.2194240Z         }
+staging	Plan and apply	2026-11-27T23:27:52.2194363Z       + tags_all                             = {
+staging	Plan and apply	2026-11-27T23:27:52.2194514Z           + "Lab"     = "lab5"
+staging	Plan and apply	2026-11-27T23:27:52.2194656Z           + "Managed" = "terraform"
+staging	Plan and apply	2026-11-27T23:27:52.2194819Z           + "Name"    = "acs730-a1-staging-rschavda1-vpc"
+staging	Plan and apply	2026-11-27T23:27:52.2194982Z         }
+staging	Plan and apply	2026-11-27T23:27:52.2195089Z     }
+staging	Plan and apply	2026-11-27T23:27:52.2195147Z
+staging	Plan and apply	2026-11-27T23:27:52.2195215Z Plan: 9 to add, 0 to change, 0 to destroy.
+staging	Plan and apply	2026-11-27T23:27:52.2195320Z
+staging	Plan and apply	2026-11-27T23:27:52.2195370Z Changes to Outputs:
+staging	Plan and apply	2026-11-27T23:27:52.2195504Z   + web_url = (known after apply)
+staging	Plan and apply	2026-11-27T23:27:52.2195593Z
+staging	Plan and apply	2026-11-27T23:27:52.2195976Z ─────────────────────────────────────────────────────────────────────────────
+staging	Plan and apply	2026-11-27T23:27:52.2196131Z
+staging	Plan and apply	2026-11-27T23:27:52.2196188Z Saved the plan to: tfplan
+staging	Plan and apply	2026-11-27T23:27:52.2196277Z
+staging	Plan and apply	2026-11-27T23:27:52.2196382Z To perform exactly these actions, run the following command to apply:
+staging	Plan and apply	2026-11-27T23:27:52.2196590Z     terraform apply "tfplan"
+staging	Plan and apply	2026-11-27T23:27:54.4325586Z module.web.aws_vpc.main: Creating...
+staging	Plan and apply	2026-11-27T23:28:04.4331544Z module.web.aws_vpc.main: Still creating... [10s elapsed]
+staging	Plan and apply	2026-11-27T23:28:06.8077122Z module.web.aws_vpc.main: Creation complete after 13s [id=vpc-06dbb92388458cc1e]
+staging	Plan and apply	2026-11-27T23:28:06.8131454Z module.web.aws_subnet.public["b"]: Creating...
+staging	Plan and apply	2026-11-27T23:28:06.8132854Z module.web.aws_internet_gateway.main: Creating...
+staging	Plan and apply	2026-11-27T23:28:06.8155277Z module.web.aws_subnet.public["a"]: Creating...
+staging	Plan and apply	2026-11-27T23:28:06.8163496Z module.web.aws_security_group.web: Creating...
+staging	Plan and apply	2026-11-27T23:28:08.2254268Z module.web.aws_internet_gateway.main: Creation complete after 1s [id=igw-0d495f26a10dbeb64]
+staging	Plan and apply	2026-11-27T23:28:08.2277742Z module.web.aws_route_table.public: Creating...
+staging	Plan and apply	2026-11-27T23:28:09.2233343Z module.web.aws_route_table.public: Creation complete after 1s [id=rtb-0e803705376d5d038]
+staging	Plan and apply	2026-11-27T23:28:09.8975232Z module.web.aws_security_group.web: Creation complete after 3s [id=sg-06ffd3bbb526c6694]
+staging	Plan and apply	2026-11-27T23:28:16.8131018Z module.web.aws_subnet.public["b"]: Still creating... [10s elapsed]
+staging	Plan and apply	2026-11-27T23:28:16.8141010Z module.web.aws_subnet.public["a"]: Still creating... [10s elapsed]
+staging	Plan and apply	2026-11-27T23:28:17.9440472Z module.web.aws_subnet.public["b"]: Creation complete after 11s [id=subnet-083019ebe0db15c55]
+staging	Plan and apply	2026-11-27T23:28:18.1244610Z module.web.aws_subnet.public["a"]: Creation complete after 11s [id=subnet-06310f4e14a05466d]
+staging	Plan and apply	2026-11-27T23:28:18.1260482Z module.web.aws_route_table_association.public["a"]: Creating...
+staging	Plan and apply	2026-11-27T23:28:18.1262402Z module.web.aws_route_table_association.public["b"]: Creating...
+staging	Plan and apply	2026-11-27T23:28:18.5439584Z module.web.aws_route_table_association.public["a"]: Creation complete after 1s [id=rtbassoc-0ac328fef4adbbd20]
+staging	Plan and apply	2026-11-27T23:28:18.5461950Z module.web.aws_route_table_association.public["b"]: Creation complete after 1s [id=rtbassoc-0c23f6a69d7a8a181]
+staging	Plan and apply	2026-11-27T23:28:18.5508460Z module.web.aws_instance.web: Creating...
+staging	Plan and apply	2026-11-27T23:28:28.5516814Z module.web.aws_instance.web: Still creating... [10s elapsed]
+staging	Plan and apply	2026-11-27T23:28:31.7201445Z module.web.aws_instance.web: Creation complete after 13s [id=i-0b161ca079130df70]
+staging	Plan and apply	2026-11-27T23:28:32.2031551Z
+staging	Plan and apply	2026-11-27T23:28:32.2032354Z Apply complete! Resources: 9 added, 0 changed, 0 destroyed.
+staging	Plan and apply	2026-11-27T23:28:32.2032629Z
+staging	Plan and apply	2026-11-27T23:28:32.2032756Z Outputs:
+staging	Plan and apply	2026-11-27T23:28:32.2032866Z
+staging	Plan and apply	2026-11-27T23:28:32.2032995Z web_url = "http://52.206.44.84/"
+staging	Post Run aws-actions/configure-aws-credentials@v4	﻿2026-11-27T23:28:32.2206679Z Post job cleanup.
+staging	Post Run actions/checkout@v4	﻿2026-11-27T23:28:32.3038332Z Post job cleanup.
+staging	Post Run actions/checkout@v4	2026-11-27T23:28:32.3639039Z [command]/usr/bin/git version
+staging	Post Run actions/checkout@v4	2026-11-27T23:28:32.3673169Z git version 2.56.1
+staging	Post Run actions/checkout@v4	2026-11-27T23:28:32.3697498Z Temporarily overriding HOME='/home/runner/work/_temp/ad136618-f19b-43f3-890e-7aa3d0f14a3e' before making global git config changes
+staging	Post Run actions/checkout@v4	2026-11-27T23:28:32.3697985Z Adding repository directory to the temporary git global config as a safe directory
+staging	Post Run actions/checkout@v4	2026-11-27T23:28:32.3701152Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/acs730-coursework/acs730-coursework
+staging	Post Run actions/checkout@v4	2026-11-27T23:28:32.3734045Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+staging	Post Run actions/checkout@v4	2026-11-27T23:28:32.3762275Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+staging	Post Run actions/checkout@v4	2026-11-27T23:28:32.4016969Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+staging	Post Run actions/checkout@v4	2026-11-27T23:28:32.4046599Z http.https://github.com/.extraheader
+staging	Post Run actions/checkout@v4	2026-11-27T23:28:32.4060889Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+staging	Post Run actions/checkout@v4	2026-11-27T23:28:32.4096100Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+staging	Post Run actions/checkout@v4	2026-11-27T23:28:32.4329225Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+staging	Post Run actions/checkout@v4	2026-11-27T23:28:32.4356830Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+staging	Complete job	﻿2026-11-27T23:28:32.4688226Z Cleaning up orphan processes
+staging	Complete job	2026-11-27T23:28:32.4938996Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, aws-actions/configure-aws-credentials@v4, hashicorp/setup-terraform@v3. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
